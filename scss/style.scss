@@ -1,8 +1,263 @@
 
-@import 'reset';
-@import 'variables';
-@import 'mixins';
-@import 'typography';
+/* 
+-------------------------------------------------------- 
+Reset
+-------------------------------------------------------- 
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+-------------------------------------------------------- 
+Variables
+-------------------------------------------------------- 
+*/
+
+/* ----- Colors ----- */
+
+$white: #fff;
+$light-gray: #F6F6F6;
+$viking: #40b3b9;
+$picton-blue: #49AFD5;
+$emerald: #5EC883;
+$cornflower: #4783F0;
+$pelorous: #1998B7;
+$charcoal: #4A4A4A;
+$near-black: #222222;
+
+/* ----- breakpoints ----- */
+
+$med: 56.25rem;
+
+/*
+-------------------------------------------------------- 
+Base Typography
+-------------------------------------------------------- 
+*/
+
+@mixin font-size($size: 1.6, $line: $size * 1.58) {
+    font-size: $size + rem;
+    line-height: $line + rem;
+}
+
+@font-face {
+    font-family: 'vollkorn';
+    src: url("../assets/fonts/vollkorn.eot");
+    src: url("../assets/fonts/vollkorn.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/vollkorn.woff") format("woff"), url("../assets/fonts/vollkorn.ttf") format("truetype"), url("../assets/fonts/vollkorn.svg#OpenSansRegular") format("svg");
+    font-weight: 100;
+    font-style: 100;
+}
+
+@font-face {
+    font-family: 'avenir';
+    src: url("../assets/fonts/Avenir-Light.eot?") format("eot"), url("../assets/fonts/Avenir-Light.otf") format("opentype"), url("../assets/fonts/Avenir-Light.woff") format("woff"), url("../assets/fonts/Avenir-Light.ttf") format("truetype"), url("../assets/fonts/Avenir-Light.svg#AvenirLTStd-Light") format("svg");
+    font-weight: 100;
+    font-style: 100;
+}
+
+html {
+    @include font-size(1);
+}
+
+body {
+    font-family: 'avenir', sans-serif;
+}
+
+h1 {
+    @include font-size(2.2);
+}
+
+h2 {
+    @include font-size(1.8);
+}
+
+h3 {
+    @include font-size(1.6);
+}
+
+h4 {
+    @include font-size(1.2);
+}
+
+p {
+    @include font-size(1);
+}
+
+/*
+-------------------------------------------------------- 
+Mixins
+-------------------------------------------------------- 
+*/
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-wrap($value: nowrap) {
+    -webkit-flex-wrap: $value;
+    -moz-flex-wrap: $value;
+    @if $value == nowrap {
+        -ms-flex-wrap: none;
+    } @else { 
+        -ms-flex-wrap: $value; 
+    }
+    flex-wrap: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+    @if $value == flex-start {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+    } @else if $value == flex-end {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+    } @else if $value == space-between {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    } @else if $value == space-around {
+        -ms-flex-pack: distribute;      
+    } @else {
+        -webkit-box-pack: $value;
+        -ms-flex-pack: $value;
+    }
+    -webkit-justify-content: $value;
+    -moz-justify-content: $value;
+    justify-content: $value;
+}
+
+@mixin flex-direction($value: row) {
+    @if $value == row-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: horizontal;
+    } @else if $value == column {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+    } @else if $value == column-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+    } @else {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+    }
+    -webkit-flex-direction: $value;
+    -moz-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
+
+@mixin flex-grow($int: 0) {
+    -webkit-box-flex: $int;
+    -webkit-flex-grow: $int;
+    -moz-flex-grow: $int;
+    -ms-flex-positive: $int;
+    flex-grow: $int;
+}
+
+@mixin align-items($value: stretch) {
+    @if $value == flex-start {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+    } @else if $value == flex-end {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+    } @else {
+        -webkit-box-align: $value;
+        -ms-flex-align: $value;
+    }
+    -webkit-align-items: $value;
+    -moz-align-items: $value;
+    align-items: $value;
+}
+
+@mixin align-self($value: auto) {
+    -webkit-align-self: $value;
+    -moz-align-self: $value;
+    @if $value == flex-start {
+        -ms-flex-item-align: start;
+    } @else if $value == flex-end {
+        -ms-flex-item-align: end;
+    } @else {
+        -ms-flex-item-align: $value;
+    }
+    align-self: $value;
+}
+
+@mixin vendor-prefix($name, $argument) {
+    -webkit-#{$name}: #{$argument};
+    -ms-#{$name}: #{$argument};
+    -moz-#{$name}: #{$argument};
+    -o-#{$name}: #{$argument};
+    #{$name}: #{$argument};
+}
+
+@mixin transition($transition-property: all, $transition-time: 0.5s, $method: ease) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
 
 /* 
 -------------------------------------------------------- 
@@ -16,7 +271,6 @@ Global
 
 html {
     background-color: $white;
-    // position: relative;
 }
 
 body {
@@ -116,10 +370,10 @@ nav {
     padding: .5em;
 
     .wrap {
-        @include flexbox;
-        @include flex-direction(row);
-        @include align-items(center);
-        @include justify-content(space-between);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .logo-wrap a {
@@ -128,8 +382,8 @@ nav {
     }
 
     ul {
-        @include flexbox;
-        @include align-items(center);
+        display: flex;
+        align-items: center;
 
         li {
             margin-left: 3rem;
@@ -201,13 +455,13 @@ footer {
 
     ul {
         margin-top: 2rem;
-        @include flexbox;
-        @include flex-wrap(wrap);
-        @include justify-content(center);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         li {
              margin: 0 2rem;
-             @include flexbox;
+             display: flex;
         }
     }
 }
@@ -303,9 +557,9 @@ Pages: Index
 /* ----- Index: Work ----- */
 
 .index .projects-wrap {
-    @include flexbox;
-    @include flex-wrap(wrap);
-    @include justify-content(center);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     li:nth-child(1) a {
       background-color: $picton-blue;
@@ -352,14 +606,13 @@ Pages: Index
         padding: 0 30px 30px 0;
         position: relative;
         width: 33.333%;
-        @include flexbox;
+        display: flex;
 
         a {
             min-height: 200px;
-            display: block;
-            @include flexbox;
-            @include flex-direction(column);
-            @include flex-grow(1)
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
             @include transition;
 
             .project-title{
@@ -523,10 +776,10 @@ Pages: Portfolio Projects
 
 
         &:not(.no-flexbox) {
-            @include flexbox;
-            @include justify-content(center);
-            @include flex-direction;
-            @include flex-wrap(wrap);
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
 
             .figure {
@@ -587,10 +840,6 @@ Pages: Portfolio Projects
     }
 }
 
-// .featherlight .featherlight-content {
-//     background: transparent;
-// }
-
 .featherlight-loading .featherlight-content {
   -webkit-animation: featherlightLoader 1s infinite linear;
           animation: featherlightLoader 1s infinite linear;
@@ -621,8 +870,8 @@ Pages: Portfolio Projects
         text-align: center;
         border-bottom: 2px solid $white;
         margin-top: 3rem;
-        @include flexbox;
-        @include justify-content(space-between);
+        display: flex;
+        justify-content: space-between;
 
         .direction {
             width: 100%;
@@ -635,8 +884,8 @@ Pages: Portfolio Projects
 
             a { 
                 padding: 5rem 0;
-                @include flexbox;
-                @include justify-content(center);
+                display: flex;
+                justify-content: center;
 
                 div a{
                     text-align: left;
@@ -693,7 +942,7 @@ Pages: Portfolio Projects
 
 /* 
 -------------------------------------------------------- 
-Pages: Manifesto & Cartoons
+Pages: Manifesto
 -------------------------------------------------------- 
 */
 
