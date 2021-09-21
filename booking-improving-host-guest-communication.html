@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Leor Maizel | Product Designer | Portfolio | Booking.com: Improving Host to Guest Communication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Leor Maizel, UX & Product Design Portfolio">
+    <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+</head>
+
+<body class="portfolio-project proj-5 booking">
+
+    <!-- header -->
+    <nav id="topbar" class="fullbar">
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
+            <ul>
+                <li><a class="link nav" href="index.html#work">work</a></li>
+                <li><a class="link nav" href="index.html#about">about</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <canvas id="canvas-basic"></canvas>
+        <div class="wrap">
+            <div class="tagline">
+                <h1>Booking.com<span>Improving Host to Guest Communication</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <section>
+        <div class="wrap">
+
+            <h2>Background</h2>
+            <p>
+                As described in the previous project, <a class="link" href="bookingsuite-uno.html">BookingSuite Uno</a>, the MVP of
+                BookingSuite’s all-in-one hotel
+                management product took a dramatic turn just as it had entered pilot.
+                Booking.com (the parent company of BookingSuite) already had a platform (the
+                “Extranet”) on which over 20 million accommodation partners manage their room
+                rates and availability. It didn’t make sense to start from square one with
+                customer acquisition on our own platform when we could have a massive and
+                instantly addressable market if we integrated our product into the existing
+                Extranet.
+            </p>
+            <p>
+                However, our tech stack did not play nicely with the Extranet. Nor could our
+                designs simply be ported into this new environment. We had to design and build
+                again.
+            </p>
+            <h2>Adapting to a New World</h2>
+            <p>
+                the Extranet had different design patterns and a different core IA. Most
+                importantly, Booking.com practices a radically different design philosophy;
+                whereas the team at BookingSuite was accustomed to designing large-scale
+                greenfield products, Booking.com is organizationally devoted to small-scale A/B
+                testing, in which the most minute change must be defended with statistical
+                significance. I needed to redesign all of the features of Uno in a phased
+                approach; I’d design for the least amount of change, A/B test, and then proceed
+                to the next phase.
+            </p>
+            <p>
+                A screen of the Booking.com extranet. With a vastly different IA, redesigning
+                Uno would be a huge challenge.
+            </p>
+            <div class="gallery">
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/old-home.jpg">
+                            <img src="assets/img/proj-booking/old-home.jpg">
+                        </a>
+                    </div>
+                    <p>A screen of the Booking.com hotelier extranet "Today" page. With a vastly different IA and featureset, redesigning Uno would be quite the challenge.
+                    </p>
+                </div>
+            </div>
+            <h2>Redesigning the Dashboard: Research/Design Process</h2>
+            <p>
+                One of the goals of Uno was to enable the hotelier to see the most critical
+                information about their hotel in a central, upfront location. This included:
+            </p>
+            <ul>
+                <li>Messages from guest</li>
+                <li>Estimated guest arrival times</li>
+                <li>Check-ins/outs for the day</li>
+                <li>Booking notifications</li>
+                <li>Etc.</li>
+
+            </ul>
+            <p>
+                The Extranet’s hotelier dashboard (for a subset of its hotel partners) had some
+                of this functionality but lacked many of the features that were important to
+                Uno’s value proposition. Before I added features to the dashboard, I wanted to
+                gain a baseline sense of what was and wasn’t working well.
+            </p>
+            <p>
+                I conducted remote usability tests with 14 different hotel partners in Europe,
+                North, South, and Central America and was able to draw upon reams of research
+                generated by Booking.com’s in-house researchers.
+            </p>
+            <p>
+                The usability data we gathered for this page was not encouraging:
+            </p>
+            <ul>
+                <li>CSAT numbers for the Extranet were extremely poor</li>
+                <li>The existing dashboard was far too information-dense; it showed guest
+                    arrivals and departures, recent booking.com reviews, new bookings, and messages
+                    sent from the guest all together with no discernable content hierarchy or
+                    separation</li>
+                <li>As a result, users were not reliably able to find any specific piece of
+                    information, such as when a guest might be arriving today. This led to
+                    disastrous outcomes in which hoteliers would frequently missing a critical guest
+                    message. One such instance was relayed with great embarrassment by the owner of
+                    a hotel in Amsterdam: “it wasn’t just ‘Hi, can I have another pillow?’, it is
+                    things like ‘I’m getting to the airport at 3 am, how can I get to your hotel?’
+                    The guest felt abandoned.”</li>
+                <li>Virtually nothing on the page was actionable without having to navigate
+                    elsewhere</li>
+            </ul>
+            <p>
+                Taking this feedback into account, I designed a version of the dashboard that
+                organized the data by category and provided immediate next steps for each item.
+                For some items, like arrivals and departures, chronology was of paramount
+                importance; the hotelier needed to know which guests were arriving/departing
+                first. For other items, like new guest reviews, chronology was trivial—it
+                mattered less when the event occurred than simply notifying the hotelier that it
+                occurred.
+            </p>
+            <div class="gallery">
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/extra-wire-1.jpg">
+                            <img src="assets/img/proj-booking/extra-wire-1.jpg">
+                        </a>
+                    </div>
+                    <p>Fleshing out concepts for the new Today page, with added Uno functionality and an improved IA
+                    </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/extra-wire-2.jpg">
+                            <img src="assets/img/proj-booking/extra-wire-2.jpg">
+                        </a>
+                    </div>
+                    <p>Fleshing out concepts...
+                    </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/extra-wire-3.jpg">
+                            <img src="assets/img/proj-booking/extra-wire-3.jpg">
+                        </a>
+                    </div>
+                    <p>More concepting...
+                    </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/extra-wire-4.jpg">
+                            <img src="assets/img/proj-booking/extra-wire-4.jpg">
+                        </a>
+                    </div>
+                    <p>And more concepting...
+                    </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/extra-wire-5.jpg">
+                            <img src="assets/img/proj-booking/extra-wire-5.jpg">
+                        </a>
+                    </div>
+                    <p>And yet more concepting...
+                    </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/new-home-desktop.jpg">
+                            <img src="assets/img/proj-booking/new-home-desktop.jpg">
+                        </a>
+                    </div>
+                    <p>A hi-fi screen of the proposed Today page design, which I would then A/B test
+                    </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-booking/new-home-mobile.jpg">
+                            <img src="assets/img/proj-booking/new-home-mobile.jpg">
+                        </a>
+                    </div>
+                    <p>Mobile view of the new Today page
+                    </p>
+                </div>
+            </div>
+            <h2>Evaluation Process: A/B Testing</h2>
+            <p>
+                Normally, after coming up with a proposed design, my first instinct would be to
+                prototype and test the designs in moderated usability sessions. However, the
+                culture at Booking.com heavily favored A/B testing over more qualitative
+                measures. In hindsight, I would have pushed harder to fit a qualitative
+                evaluation stage into my process, but as a new member of the Booking.com org, I
+                didn’t feel I had the organizational clout to push the envelope quite yet.
+            </p>
+            <p>
+                The results of the test were overwhelmingly positive. My design increased
+                next-step actions, such as hosts responding to guest messages by <span class="crazy-booking-stat">391%</span>. Measured
+                by this metric, this experiment was in the 97th percentile of all experiments
+                ever run at Booking.com (although this probably resulted from the fact that the
+                design changes were much larger in scope than was normal). The redesigned
+                dashboard decreased inbound support requests, saving more than 700 customer
+                support hours per quarter.
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+                During my time at Booking.com, the experiment was turned “full-on” and released
+                to approximately 1 million hotel partners around the world.
+            </p>
+            <p>
+                Designers from the Booking.com home office in Amsterdam took notice of this
+                experiment and even reached out to learn about our product design philosophy and
+                qualitative feedback-gathering methods. I’d like to think I’ve made a small dent
+                in their universe.
+            </p>
+        </div>
+    </section>
+
+    <!-- previous/next project -->
+    <div class="project-nav">
+        <div class="direction">
+            <a href="bookingsuite-uno.html" rel="prev" title="Next Project: BookingSuite Uno">
+                <div>
+                    <span class="previous">Previous Project</span>
+                    <h3>BookingSuite Uno</h3>
+                </div>
+            </a>
+        </div>
+        <div class="direction">
+            <a href="prophia-mvp.html" rel="next" title="Next Project: Prophia MVP">
+                <div>
+                    <span class="next">Next Project</span>
+                    <h3>Prophia MVP</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"><img src="assets/img/logo/logo-white.png" height="50px" width="50px"
+                        alt="logo-white.png" /></a>
+            </div>
+            <ul class="footer-links">
+                <li><a class="link nav" href="resume.pdf" target="_blank">resum&eacute;</a></li>
+                <li><a class="link nav" href="http://www.linkedin.com/in/leormaizel/" target="_blank">linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/granim.min.js"></script>
+    <script>
+        //Gradient genrator for header section
+        var granimInstance = new Granim({
+            element: '#canvas-basic',
+            name: 'basic-gradient',
+            direction: 'left-right',
+            opacity: [1, 1],
+            isPausedWhenNotInView: true,
+            states: {
+                "default-state": {
+                    gradients: [
+                        ['#1998B7', '#1A6EB8'],
+                        ['#1A6EB8', '#1998B7']
+                    ]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

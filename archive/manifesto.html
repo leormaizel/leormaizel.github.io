@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Leor Maizel | Product Designer | Portfolio | Manifesto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Leor Maizel, UX & Product Design Portfolio">
+	<link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+</head>
+
+<body class="project manifesto-pg">
+	<!-- header -->
+	<nav id="topbar" class="fullbar">
+		<div class="wrap">
+			 <div class="logo-wrap">
+				<a href="index.html"></a>
+			</div>
+			<ul>
+				<li><a class="link nav" href="/#work">work</a></li>
+				<li><a class="link nav" href="/#about">about</a></li>
+			</ul>
+		</div>
+	</nav>
+	<header>
+		<canvas id="canvas-basic"></canvas>
+		<div class="wrap">
+		</div>
+	</header>
+	<!-- work -->
+	<section>
+		<div class="wrap">
+			<h3>There’s no denying that things have changed.</h3>
+			<p>People have more access to technology than ever before. Devices with computing power unfathomable even 7
+				years ago years ago now fit in our pocket. In our homes, our workplaces, and on our bodies, the
+				internet, mobile applications, biometric technologies, voice control devices, and
+				virtual/mixed/augmented realities are the substratum upon which we carry out our daily lives, conduct
+				business and socialize with other human beings.</p>
+			<p>As a result, core attitudes, assumptions, and routines that inextricably governed our lives are now
+				irrevocably changed&#8212;the way we share information about ourselves is different. The way we expect
+				to meet people is different. The way we expect to consume and retain information is different.</p>
+			<p>This unprecedentedly rapid disruption has given way to a renaissance in the ways we interact with digital
+				objects; the triumph of user centered design is in the dissemination of the idea that digital products
+				and experiences should not only be of high performance and technical craftsmanship, but also something
+				beyond the utilitarian&#8212;a little bit magical.</p>
+			<p>But the pursuit of user centered design faces a dilemma.</p>
+			<p>As designers, our role is to create digital products that add positive value in people’s lives. But what
+				price have we paid?</p>
+			<p>The more we create digital products that seek to enhance real physical experiences, the greater the risk
+				that we begin to devalue the simple, core and real experiences that define what it is to be human.</p>
+			<p>What are we, as a modern, technologically advanced society, sacrificing?</p>
+			<div class="videos">
+				<div class="video-container">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/xPiprkwzEWU?rel=0&amp;showinfo=0" frameborder="0"
+						allowfullscreen></iframe>
+				</div>
+				<div class="video-container">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/OINa46HeWg8?rel=0&amp;showinfo=0" frameborder="0"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+			<p>We as designers have a responsibility. If we feel that that something real, vulnerable and inherently
+				human is weakening, we can not excuse ourselves as passive agents. We design these products. We must
+				address their consequences.</p>
+			<p>Let us as an industry seek to design tools that help users carry out their daily tasks so they can get
+				back to the business of human interaction. Let us always keep a watchful eye on whether our products
+				encourage or discourage real social connections.</p>
+			<p>And let us continually strive to find a happy medium.</p>
+	</section>
+
+	<!-- footer -->
+	<footer>
+		<div class="wrap">
+			<div class="logo-wrap">
+				<a href="index.html"><img src="assets/img/logo/logo-white.png" height="50px" width="50px"
+						alt="logo-white.png" /></a>
+			</div>
+			<ul class="footer-links">
+				<li><a class="link nav" href="resume.pdf" target="_blank">resum&eacute;</a></li>
+				<li><a class="link nav" href="http://www.linkedin.com/in/leormaizel/" target="_blank">linkedin</a></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="js/granim.min.js"></script>
+	<script>
+		//Gradient genrator for header section
+		var granimInstance = new Granim({
+			element: '#canvas-basic',
+			name: 'basic-gradient',
+			direction: 'left-right',
+			opacity: [1, 1],
+			isPausedWhenNotInView: true,
+			states: {
+				"default-state": {
+					gradients: [
+						['#3E393D', '#594F57'],
+						['#736D65', '#DCA84A'],
+						['#544956', '#D8C08E'],
+						['#DCA84A', '#3F3441']
+					]
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -117,10 +117,6 @@ h2 {
 }
 
 h3 {
-    @include font-size(1.6);
-}
-
-h4 {
     @include font-size(1.2);
 }
 
@@ -133,103 +129,6 @@ p {
 Mixins
 -------------------------------------------------------- 
 */
-
-@mixin flexbox {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-@mixin flex-wrap($value: nowrap) {
-    -webkit-flex-wrap: $value;
-    -moz-flex-wrap: $value;
-    @if $value == nowrap {
-        -ms-flex-wrap: none;
-    } @else { 
-        -ms-flex-wrap: $value; 
-    }
-    flex-wrap: $value;
-}
-
-@mixin justify-content($value: flex-start) {
-    @if $value == flex-start {
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-    } @else if $value == flex-end {
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-    } @else if $value == space-between {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-    } @else if $value == space-around {
-        -ms-flex-pack: distribute;      
-    } @else {
-        -webkit-box-pack: $value;
-        -ms-flex-pack: $value;
-    }
-    -webkit-justify-content: $value;
-    -moz-justify-content: $value;
-    justify-content: $value;
-}
-
-@mixin flex-direction($value: row) {
-    @if $value == row-reverse {
-        -webkit-box-direction: reverse;
-        -webkit-box-orient: horizontal;
-    } @else if $value == column {
-        -webkit-box-direction: normal;
-        -webkit-box-orient: vertical;
-    } @else if $value == column-reverse {
-        -webkit-box-direction: reverse;
-        -webkit-box-orient: vertical;
-    } @else {
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-    }
-    -webkit-flex-direction: $value;
-    -moz-flex-direction: $value;
-    -ms-flex-direction: $value;
-    flex-direction: $value;
-}
-
-@mixin flex-grow($int: 0) {
-    -webkit-box-flex: $int;
-    -webkit-flex-grow: $int;
-    -moz-flex-grow: $int;
-    -ms-flex-positive: $int;
-    flex-grow: $int;
-}
-
-@mixin align-items($value: stretch) {
-    @if $value == flex-start {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-    } @else if $value == flex-end {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-    } @else {
-        -webkit-box-align: $value;
-        -ms-flex-align: $value;
-    }
-    -webkit-align-items: $value;
-    -moz-align-items: $value;
-    align-items: $value;
-}
-
-@mixin align-self($value: auto) {
-    -webkit-align-self: $value;
-    -moz-align-self: $value;
-    @if $value == flex-start {
-        -ms-flex-item-align: start;
-    } @else if $value == flex-end {
-        -ms-flex-item-align: end;
-    } @else {
-        -ms-flex-item-align: $value;
-    }
-    align-self: $value;
-}
 
 @mixin vendor-prefix($name, $argument) {
     -webkit-#{$name}: #{$argument};
@@ -245,18 +144,6 @@ Mixins
     -ms-transition: $transition-property $transition-time $method;
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
-}
-
-@mixin clearfix {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-
-    &:after {
-        clear: both;
-    }
 }
 
 /* 
@@ -288,10 +175,6 @@ a {
     margin: auto;
 }
 
-ul, ol {
-    list-style-type: none;
-}
-
 /* ----- Global: Links ----- */
 
 .link {
@@ -303,7 +186,7 @@ ul, ol {
         position: relative;
         color: $viking;
         background: $viking;
-        -webkit-background-clip: text;
+        @include vendor-prefix(background-clip, text);
         -webkit-text-fill-color: transparent;
         @include transition;
     };
@@ -330,7 +213,7 @@ ul, ol {
     span {
         color: #fff;
         background: #fff;
-        -webkit-background-clip: text;
+        @include vendor-prefix(background-clip, text);
         -webkit-text-fill-color: transparent;
     };
 
@@ -345,7 +228,7 @@ nav.fullbar .nav.link {
     span {
         color: $near-black;
         background: $near-black;
-        -webkit-background-clip: text;
+        @include vendor-prefix(background-clip, text);
         -webkit-text-fill-color: transparent;
     }
 
@@ -377,7 +260,7 @@ nav {
     }
 
     .logo-wrap a {
-        background: url(../assets/img/logo-white.png) center center no-repeat;
+        background: url(../assets/img/logo/logo-white.png) center center no-repeat;
         background-size: contain;
     }
 
@@ -397,7 +280,7 @@ nav.fullbar {
     @include vendor-prefix(box-shadow, 0px 0px 8px 1px rgba(168,168,168,0.5));
 
     .logo-wrap a {
-        background: url(../assets/img/logo-black.png) center center no-repeat;
+        background: url(../assets/img/logo/logo-black.png) center center no-repeat;
         background-size: contain;
     }
 
@@ -449,7 +332,7 @@ footer {
 
     .logo-wrap a {
         margin: auto;
-        background: url(../assets/img/logo-white.png) center center no-repeat;
+        background: url(../assets/img/logo/logo-white.png) center center no-repeat;
         background-size: contain;
     }
 
@@ -466,95 +349,31 @@ footer {
     }
 }
 
-.uno footer {
-    background-image: linear-gradient(-270deg, rgb(13, 195, 204) 0%, rgb(53, 205, 172) 100%);
-}
-.webdirect footer {
-    background-image: linear-gradient(-270deg, rgb(13, 195, 204) 0%, rgb(53, 205, 172) 100%);
-}
-.bks-website footer {
-    background-image: linear-gradient(-270deg, rgb(13, 195, 204) 0%, rgb(53, 205, 172) 100%);
-}
-.keyword-search footer {
-    background-image: linear-gradient(-270deg, rgb(13, 195, 204) 0%, rgb(53, 205, 172) 100%);
-}
-.news-analysis footer {
-    background-image: linear-gradient(-270deg, rgb(13, 195, 204) 0%, rgb(53, 205, 172) 100%);
-}
-.pb-feature footer {
-    background-image: linear-gradient(-270deg, rgb(13, 195, 204) 0%, rgb(53, 205, 172) 100%);
-}
-
 /* 
 -------------------------------------------------------- 
-Pages: Index
+Color Coordination
 -------------------------------------------------------- 
 */
-.index {
-    section {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
 
-        &:nth-child(odd){
-            background: $light-gray;
-        }
-    }
+/* ----- Footer Gradient ----- */
 
-    .title {
-        margin-bottom: 2rem;
-        text-align: center;
-    }
+.proj-1 footer {
+    background: linear-gradient(-270deg, hsla(196, 63%, 56%, 1) 0%, hsla(181, 61%, 35%, 1) 100%);
+}
+.proj-2 footer {
+    background: linear-gradient(-270deg, hsla(141, 49%, 58%, 1) 0%, hsla(173, 49%, 57%, 1) 100%);
+}
+.proj-3 footer {
+    background: linear-gradient(-270deg, hsla(183, 49%, 49%, 1) 0%, hsla(206, 48%, 49%, 1) 100%);
+}
+.proj-4 footer {
+    background: linear-gradient(-270deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+}
+.proj-5 footer {
+    background: linear-gradient(-270deg, hsla(192, 76%, 41%, 1) 0%, hsla(208, 75%, 41%, 1) 100%);
 }
 
-/* ----- Index: Header ----- */
-
-.index header {
-    height: 40rem;
-    background-image: url(../assets/img/banner-index.jpg);
-
-    .tagline {
-        padding-top: 10rem;
-        text-align: center;
-
-        h1 {
-            @include font-size(6);
-        }
-
-        h2 {
-            @include font-size(3);
-        }
-    }
-}
-
-/* ----- Index: Manifesto ----- */
-
-.index .manifesto {
-    color: $charcoal;
-    text-align: center;
-
-    .prompt {
-        @include font-size(1.6);
-
-        div {
-          @include font-size(2);
-        }
-    }
-
-    blockquote {
-        font-family: 'vollkorn', sans-serif;
-        margin: 2rem auto;
-        max-width: 30rem;
-        @include font-size(1);
-    }
-
-    .attrib {
-        font-family: 'vollkorn', sans-serif;
-        margin-top: 2rem;
-        @include font-size(1);
-    }
-}
-
-/* ----- Index: Work ----- */
+/* ----- Index Page Project Blocks ----- */
 
 .index .projects-wrap {
     display: flex;
@@ -591,14 +410,105 @@ Pages: Index
         background-color: darken($pelorous, 10%);
       }
     }
-    li:nth-child(6) a {
-      background-color: $picton-blue;
-      &:hover{
-        background-color: darken($picton-blue, 10%);
-      }
+}
+
+/* ----- Project Page Lines ----- */
+
+.portfolio-project.prophia-mvp .project-nav span.next:before,
+.portfolio-project.prophia-mvp .project-nav span.previous:after {
+    background: $picton-blue;
+}
+.portfolio-project.prophia-ml .project-nav span.next:before,
+.portfolio-project.prophia-ml .project-nav span.previous:after {
+    background: $emerald;
+}
+.portfolio-project.scgc .project-nav span.next:before,
+.portfolio-project.scgc .project-nav span.previous:after {
+    background: $viking;
+}
+.portfolio-project.uno .project-nav span.next:before,
+.portfolio-project.uno .project-nav span.previous:after {
+    background: $cornflower;
+}
+.portfolio-project.booking .project-nav span.next:before,
+.portfolio-project.booking .project-nav span.previous:after {
+    background: $pelorous;
+}
+
+/* 
+-------------------------------------------------------- 
+Pages: Index
+-------------------------------------------------------- 
+*/
+
+.index {
+    section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        &:nth-child(odd){
+            background: $light-gray;
+        }
     }
 
-    li.featured {
+    .title {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+/* ----- Index: Header ----- */
+
+.index header {
+    height: 40rem;
+    background-image: url(../assets/img/banner/forest.jpg);
+
+    .tagline {
+        padding-top: 10rem;
+        text-align: center;
+
+        h1 {
+            @include font-size(6);
+        }
+
+        h2 {
+            @include font-size(3);
+        }
+    }
+}
+
+/* ----- Index: Quotes ----- */
+
+.index .quotes {
+    color: $charcoal;
+    text-align: center;
+
+        div {
+          @include font-size(2);
+        }
+
+    blockquote {
+        font-family: 'vollkorn', sans-serif;
+        margin: auto;
+        max-width: 700px;
+        @include font-size(1);
+    }
+
+    .attrib {
+        font-family: 'vollkorn', sans-serif;
+        margin-top: 2rem;
+        @include font-size(1);
+    }
+}
+
+/* ----- Index: Work ----- */
+
+.index .projects-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li.headliner {
       width: 50%;
     }
 
@@ -632,19 +542,12 @@ Pages: Index
     }
 }
 
-
 /* ----- Index: About ----- */
 
 .index .about {
 
     .wrap {
-        max-width: 50rem;
-    }
-
-    img {
-        float: left;
-        margin: 0 1rem 1rem 0;
-        width: 10rem;
+        max-width: 700px;
     }
     
     p {
@@ -666,89 +569,73 @@ Pages: Portfolio Projects
 
 /* ----- Portflio Projects: Header ----- */
 
-.portfolio-project header {
+.portfolio-project {
+
+    header {
     height: 20rem;
+    padding-bottom: 1rem;
 
-    .tagline {
-        position: absolute;
-        bottom: 1px;
-        text-align: left;
+        .tagline {
+            position: absolute;
+            bottom: 1px;
+            text-align: left;
 
-        h1 {
-            @include font-size(3);
+            h1 {
+                @include font-size(2.2);
+
+                span {
+                    display: block;
+                    @include font-size(1.6);
+                }
+            }
         }
     }
 }
 
-.uno.portfolio-project header {
-    background-image: url(../assets/img/banner-clouds1.jpg) ;
+.portfolio-project.proj-1 header {
+    background-image: url(../assets/img/banner/city.jpg) ;
 }
-.webdirect.portfolio-project header {
-    background-image: url(../assets/img/banner-bridge1.jpg) ;
+.portfolio-project.proj-2 header {
+    background-image: url(../assets/img/banner/city-2.jpg) ;
 }
-.bks-website.portfolio-project header {
-    background-image: url(../assets/img/banner-lightning.jpg) ;
+.portfolio-project.proj-3 header {
+    background-image: url(../assets/img/banner/gov.jpg) ;
 }
-.keyword-search.portfolio-project header {
-    background-image: url(../assets/img/banner-nightsky.jpg) ;
+.portfolio-project.proj-4 header {
+    background-image: url(../assets/img/banner/hotel.jpg) ;
 }
-.news-analysis.portfolio-project header {
-    background-image: url(../assets/img/banner-waves.jpg) ;
-}
-.pb-feature.portfolio-project header {
-    background-image: url(../assets/img/banner-forestclouds.jpg) ;
-}
-.manifesto-pg header {
-    background-image: url(../assets/img/banner-nighttree.jpg) ;
+.portfolio-project.proj-5 header {
+    background-image: url(../assets/img/banner/hotel-2.jpg) ;
 }
 
 /* ----- Portflio Projects: Content ----- */
 
 .portfolio-project {
 
-    section {
-        padding-bottom: 2rem;
-        font-family:'vollkorn', sans-serif;
-        @include font-size(1.2);
-    
-
-        &.background {
-            background-color: $light-gray;
-            padding-top: 2rem;
-        }
-
-        &.background + section {
-            padding-top: 2rem;
-        }
-
-        & .wrap {
-            max-width: 45rem;
-        }
-
-        p,
-        ul {
-            margin: 1rem 0 1rem;
-        }
-
-        ul {
-            padding-left: 1.5rem;
-            @include font-size(1);
-
-            li:before {
-                content: "\0BB \020";
-            }
-        }
+    .wrap {
+        max-width: 45rem;
     }
 
-    .item-title {
-            font-family: 'avenir', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.2rem;
-            position: relative;
-            margin: 1rem 0 1rem;
-            @include font-size (0.8);
+    section {
+        padding-bottom: 2rem;
+        font-family:'vollkorn', serif;
 
-            &:not(.next-item):after {
+        ul {
+            @include font-size(1);
+            margin: 1rem 0 1rem;
+            padding-left: 3rem;
+    
+            li{
+                list-style-type: disc;
+                margin: .5rem 0;
+            }
+        }
+
+        h2 {
+            font-family: 'avenir', sans-serif;
+            position: relative;
+    
+            &:after {
                 content: "";
                 position: absolute;
                 margin-left: 0.5em;
@@ -756,21 +643,19 @@ Pages: Portfolio Projects
                 width: 3rem;
                 height: 2px;
             }
-
-            &.next-item:before{
-                content: "";
-                position: absolute;
-                margin-right: 0.5em;
-                top: 36%;
-                width: 3rem;
-                height: 2px;
-                left: -44%;
-            } 
         }
+    
+        h2, 
+        h3 {
+            margin-top: 3rem;
+        }
+    
+        p {
+            margin: 1rem 0 1rem;
+        }
+    }
 
     .gallery {
-        width: 90%;
-        max-width: 70rem;
         margin: auto;
         padding-bottom: 2rem;
 
@@ -784,11 +669,17 @@ Pages: Portfolio Projects
 
             .figure {
                 margin: 1rem;
-                max-width: 20rem;
+                width: 320px;
+                
+
+                div {
+                max-height: 320px;
+                overflow: hidden;
+                border: 1px solid rgb(235, 235, 236);
+                }
 
                 img {
                     width: 100%;
-                    border: 1px solid rgb(235, 235, 236);
                 }
             }
 
@@ -873,6 +764,14 @@ Pages: Portfolio Projects
         display: flex;
         justify-content: space-between;
 
+        & > div:nth-child(2) {
+            border-left: 2px solid $white;
+
+            a div {
+                text-align: right;
+            }
+        }
+
         .direction {
             width: 100%;
             text-align: left;
@@ -880,6 +779,29 @@ Pages: Portfolio Projects
 
             &:hover {
                 background-color: darken($light-gray, 4%)
+            }
+
+            span {
+                font-family: 'avenir', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                position: relative;
+                margin: 1rem 0 1rem;
+                @include font-size (0.8);
+        
+                &.next:before,
+                &.previous:after {
+                    content: "";
+                    position: absolute;
+                    margin-right: 0.5em;
+                    top: 36%;
+                    width: 3rem;
+                    height: 2px;
+                }
+
+                &.next:before {
+                    left: -44%;
+                }
             }
 
             a { 
@@ -896,81 +818,7 @@ Pages: Portfolio Projects
                     color: $charcoal
                 }
             }
-
-            &.next{
-                border-left: 2px solid $white;
-
-                a div {
-                    text-align: right;
-                }
-            }
         }
-
-        .visit {
-            display: inline-block;
-            background-color: $light-gray;
-            padding: .5rem 2rem;
-        }
-    }
-}
-
-.portfolio-project.uno .item-title:after,
-.portfolio-project.uno .item-title.next-item:before {
-    background: $picton-blue;
-}
-.portfolio-project.webdirect .item-title:after,
-.portfolio-project.webdirect .item-title.next-item:before {
-    background: $emerald;
-}
-.portfolio-project.bks-website .item-title:after,
-.portfolio-project.bks-website .item-title.next-item:before {
-    background: $viking;
-}
-.portfolio-project.keyword-search .item-title:after,
-.portfolio-project.keyword-search .item-title.next-item:before {
-    background: $cornflower;
-}
-.portfolio-project.news-analysis .item-title:after,
-.portfolio-project.news-analysis .item-title.next-item:before {
-    background: $pelorous;
-}
-.portfolio-project.pb-feature .item-title:after,
-.portfolio-project.pb-feature .item-title.next-item:before {
-    background: $picton-blue;
-}
-
-
-/* 
--------------------------------------------------------- 
-Pages: Manifesto
--------------------------------------------------------- 
-*/
-
-
-.manifesto-pg {
-
-    section {
-        padding-top: 3rem;
-    }
-
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        height: 0;
-        overflow: hidden;
-        width: 49%;
-        display: inline-block;
-    }
-
-    .video-container iframe,
-    .video-container object,
-    .video-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
     }
 }
 
@@ -992,7 +840,6 @@ Media Queries
     }
 
     .index {
-
         .projects-wrap li,
         .projects-wrap li.featured {
             width: 100%;

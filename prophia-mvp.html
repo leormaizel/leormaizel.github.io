@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Leor Maizel | Product Designer | Portfolio | Prophia MVP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Leor Maizel, UX & Product Design Portfolio">
+    <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+</head>
+
+<body class="portfolio-project proj-1 prophia-mvp">
+
+    <!-- header -->
+    <nav id="topbar" class="fullbar">
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
+            <ul>
+                <li><a class="link nav" href="index.html#work">work</a></li>
+                <li><a class="link nav" href="index.html#about">about</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <canvas id="canvas-basic"></canvas>
+        <div class="wrap">
+            <div class="tagline">
+                <h1>Prophia MVP <span>From Zero to One</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <section>
+        <div class="wrap">
+
+            <h2>Background</h2>
+            <p>
+                Prophia (FKA Leaseable) is a platform that enables commercial real estate (CRE)
+                firms to aggregate, manage, and leverage unstructured private building data to
+                drive better asset and portfolio performance.
+            </p>
+            <p>
+                When I joined as employee #2, none of this was true&mdash;yet. The founders had only
+                a hypothesis: the inefficiency inherent in CRE processes represents an
+                opportunity for technological innovation. But what form should that take?
+            </p>
+            <h2>Validating the Problem Space</h2>
+            <p>
+                Before we built anything, our founding team met with 12 CRE executives from
+                firms ranging from boutique to REITs and pre-sold a hypothetical product to see
+                which value propositions garnered the most interest
+            </p>
+            <ul>
+                <li>Lease Management: giving CRE firms better insight into the contents of their
+                    lease portfolios</li>
+                <li>Transactional Efficiency: enabling CRE firms to track deals, lease
+                    negotiations, and collaborate as a team</li>
+                <li>Data Insights: providing authoritative benchmarking/market comp data</li>
+            </ul>
+            <p>
+                As the sole/founding designer I put together a conceptual design that
+                incorporated these 3 potential directions:
+            </p>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBJiX9DNtyGa3RmMfbUyv0R%2FFrank-Robinson%3Fnode-id%3D2%253A3%26scaling%3Dmin-zoom%26page-id%3D0%253A1"
+                allowfullscreen></iframe>
+            <p>
+                With the findings from our interviews, we developed a working understanding of:
+            </p>
+            <ul>
+                <li>The organizational differences between CRE firms of different sizes/AUM</li>
+                <li>The different job roles within each firm type</li>
+                <li>The decision-makers versus the potential platform users</li>
+                <li>Which opportunities are untapped in the competitive landscape</li>
+                <li>The inter-organizational complexity of different potential product</li>
+                directions. I.e. some solutions can deliver value to just the CRE firm, whereas
+                others require adoption by others in the ecosystem, such as Lawyers, Brokers,
+                and Banks</li>
+            </ul>
+            <h2>MVP Strategy</h2>
+            <p>
+                We focused our MVP on addressing the following key business problems:
+            </p>
+            <h3>#1: Critical business data is inaccessible</h3>
+            <p>
+                There is no source of business data more critical than the lease document; it
+                drives cash flows, budget projections, buying/selling strategy, etc. However,
+                this critical asset is always either a physical document locked in a fireproof
+                cabinet or a PDF in a jumbled share drive. The data is not accessible,
+                extensible, or dynamic
+            </p>
+            <p>
+                Furthermore, leases are inherently complex; LLs must regularly employ resources
+                to create standardized summaries of the key points of the lease to mitigate this
+                complexity.
+            </p>
+            <h3>#2: No single source of truth</h3>
+            <p>
+                Since lease data is locked away in dumb, lifeless documents, an entire solar
+                system of brittle reporting revolves around it; Excel reports are plagued with
+                broken references; uncertainty reigns over which report is the most up-to-date;
+                there are frequent data discrepancies between vendor software systems like
+                accounting, cash-flow projection, etc., where o one can be sure of the correct
+                figures without looking at the physical document.
+            </p>
+            <h3>#3: Endless low-level busywork</h3>
+            <p>
+                CRE firms have burdensome reporting obligations to stakeholders such as lenders,
+                capital partners, limited partners, the SEC, etc. Analysts regularly need to
+                generate critical reports cobbled together from numerous disparate systems, and
+                from the legal documents themselves&mdash;for every single building the firm owns!
+            </p>
+            <p>
+                In addition, the daily, bread-and-butter work of managing leases falls to the
+                armies of lease administrators whose job it is to dig through the complex
+                legalese of these documents to determine legal obligations
+            </p>
+            <h3>MVP Features</h3>
+            <p>
+                Given the target problems we hoped to solve, the Chief Architect, CPO, and I
+                brainstormed the key features of our MVP:<br>
+            </p>
+            <ul>
+                <li>A digitized version of each lease contract, where the document is keyword
+                    searchable, and where the key provisions of the lease are marked and summarized</li>
+                <li>A process that enables our internal team to manually mark and annotate each
+                    data point in each document</li>
+                <li>A standardized, and accessible “lease summary” in which the most critical
+                    data for each lease is summarized</li>
+                <li>A searchable database of tenants</li>
+                <li>Canned industry-standard reports based on this data</li>
+            </ul>
+            <h3>Design Process</h3>
+            <p>
+                I’d never designed anything from scratch before; in every previous role, the
+                universe of endless possibilities had already been collapsed into an existing
+                IA/UI. But designing Prophia was an exercise in having zero constraints&mdash;an
+                experience simultaneously nerve-wracking and liberating.
+            </p>
+            <p>
+                Several of the key questions I considered were:
+            </p>
+            <ul>
+                <li>What are the key pieces of content on the app? What are their primary
+                    differentiators? Are they hierarchical in nature, or flat?</li>
+                <li>What are the key anticipated user paths throughout this content?</li>
+            </ul>
+            <p>
+                I sought to follow as closely as possible what I observed were the paradigms
+                familiar to people in CRE, knowing of course that none of my designs would fully
+                stand the test of time and that future designers at Prophia would undoubtedly curse my name.
+                <div class="gallery">
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/story-map.jpg">
+                                <img src="assets/img/proj-prophia-mvp/story-map.jpg">
+                            </a>
+                        </div>
+                        <p>Journey-mapping core user stories</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/page-thumbs.jpg">
+                                <img src="assets/img/proj-prophia-mvp/page-thumbs.jpg">
+                            </a>
+                        </div>
+                        <p>Concepting core page layout, navigaion, and app hierarchy</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/nav-exploration-1.jpg">
+                                <img src="assets/img/proj-prophia-mvp/nav-exploration-1.jpg">
+                            </a>
+                        </div>
+                        <p>Concepts for the core navigational structure of the app</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/nav-exploration-2.jpg">
+                                <img src="assets/img/proj-prophia-mvp/nav-exploration-2.jpg">
+                            </a>
+                        </div>
+                        <p>More core navigation concepts</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/lease-lib.jpg">
+                                <img src="assets/img/proj-prophia-mvp/lease-lib.jpg">
+                            </a>
+                        </div>
+                        <p>MVP concept for the customer's portfolio of leases</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/lease-summ.jpg">
+                                <img src="assets/img/proj-prophia-mvp/lease-summ.jpg">
+                            </a>
+                        </div>
+                        <p>MVP concept for the Lease Summary, the page containing all the key lease details</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/lease-summ-2.jpg">
+                                <img src="assets/img/proj-prophia-mvp/lease-summ-2.jpg">
+                            </a>
+                        </div>
+                        <p>Another Lease Summary concept</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/term-hist.jpg">
+                                <img src="assets/img/proj-prophia-mvp/term-hist.jpg">
+                            </a>
+                        </div>
+                        <p>MVP concept for lease term history</p>
+                    </div>
+                    <div class="figure">
+                        <div>
+                            <a href="#" data-featherlight="assets/img/proj-prophia-mvp/doc-viewer.jpg">
+                                <img src="assets/img/proj-prophia-mvp/doc-viewer.jpg">
+                            </a>
+                        </div>
+                        <p>MVP concept for lease document viewer</p>
+
+                    </div>
+                </div>
+                <h2>Feedback from Design Partners</h2>
+                <p>
+                    Prophia is an enterprise-level SaaS product; It isn’t cheap, it can’t be used
+                    instantly upon sign-up, and the decision to subscribe to it involves long sales
+                    cycles. For these reasons, the Prophia MVP could not have succeeded without our
+                    Design Partners&mdash;8 CRE firms of different sizes that gave us monthly feedback. I
+                    ran (and continue to run) this program, geared toward:
+                </p>
+                <ul>
+                    <li>Gathering feedback on features in design & on our roadmap</li>
+                    <li>Shadowing team members to better understand workflows/processes</li>
+                    <li>Access to critical business reports for research purposes</li>
+                </ul>
+                <p>
+                    The Prophia MVP was released on September 18th, 2018. My ongoing research and
+                    validation work with Design Partners continues to inform our product
+                    prioritization, and we’ve seen steady quarterly growth in new customers and
+                    especially in expansions.
+                </p>
+        </div>
+    </section>
+
+    <!-- previous/next project -->
+    <div class="project-nav">
+        <div class="direction">
+            <a href="booking-improving-host-guest-communication.html" rel="prev"
+                title="Booking.com: Improving Host/Guest Communication">
+                <div>
+                    <span class="previous">Previous Project</span>
+                    <h3>Booking.com: Improving Host/Guest Communication</h3>
+                </div>
+            </a>
+        </div>
+        <div class="direction">
+            <a href="prophia-design-machine-learning.html" rel="next"
+                title="Next Project: Prophia: Design + Machine Learning">
+                <div>
+                    <span class="next">Next Project</span>
+                    <h3>Prophia: Design + Machine Learning</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"><img src="assets/img/logo/logo-white.png" height="50px" width="50px"
+                        alt="logo-white.png" /></a>
+            </div>
+            <ul class="footer-links">
+                <li><a class="link nav" href="resume.pdf" target="_blank">resum&eacute;</a></li>
+                <li><a class="link nav" href="http://www.linkedin.com/in/leormaizel/" target="_blank">linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/granim.min.js"></script>
+    <script>
+        //Gradient genrator for header section
+        var granimInstance = new Granim({
+            element: '#canvas-basic',
+            name: 'basic-gradient',
+            direction: 'left-right',
+            opacity: [1, 1],
+            isPausedWhenNotInView: true,
+            states: {
+                "default-state": {
+                    gradients: [
+                        ['#49AFD5', '#207E80'],
+                        ['#207E80', '#49AFD5']
+                    ]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

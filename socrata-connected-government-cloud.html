@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Leor Maizel | Product Designer | Portfolio | Socrata Connected Government Cloud</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Leor Maizel, UX & Product Design Portfolio">
+    <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+</head>
+
+<body class="portfolio-project proj-3 scgc">
+
+    <!-- header -->
+    <nav id="topbar" class="fullbar">
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
+            <ul>
+                <li><a class="link nav" href="index.html#work">work</a></li>
+                <li><a class="link nav" href="index.html#about">about</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <canvas id="canvas-basic"></canvas>
+        <div class="wrap">
+            <div class="tagline">
+                <h1>Socrata Connected Government Cloud</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <section>
+        <div class="wrap">
+
+        
+        </div>
+    </section>
+
+    <!-- previous/next project -->
+    <div class="project-nav">
+        <div class="direction">
+            <a href="prophia-design-machine-learning.html" rel="prev" title="Next Project: Prophia: Design + Machine Learning">
+                <div>
+                    <span class="previous">Previous Project</span>
+                    <h3>Prophia: Design + Machine Learning</h3>
+                </div>
+            </a>
+        </div>
+        <div class="direction">
+            <a href="bookingsuite-uno.html" rel="next" title="Next Project: BookingSuite Uno">
+                <div>
+                    <span class="next">Next Project</span>
+                    <h3>BookingSuite Uno</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"><img src="assets/img/logo/logo-white.png" height="50px" width="50px"
+                        alt="logo-white.png" /></a>
+            </div>
+            <ul class="footer-links">
+                <li><a class="link nav" href="resume.pdf" target="_blank">resum&eacute;</a></li>
+                <li><a class="link nav" href="http://www.linkedin.com/in/leormaizel/" target="_blank">linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/granim.min.js"></script>
+    <script>
+        //Gradient genrator for header section
+        var granimInstance = new Granim({
+            element: '#canvas-basic',
+            name: 'basic-gradient',
+            direction: 'left-right',
+            opacity: [1, 1],
+            isPausedWhenNotInView: true,
+            states: {
+                "default-state": {
+                    gradients: [
+                        ['#40B3B9', '#4186BA'],
+                        ['#4186BA', '#40B3B9']
+                    ]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

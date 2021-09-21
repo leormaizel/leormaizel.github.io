@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Leor Maizel | Product Designer | Portfolio | Prophia: Design + Machine Learning
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Leor Maizel, UX & Product Design Portfolio">
+    <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+</head>
+
+<body class="portfolio-project proj-2 prophia-ml">
+
+    <!-- header -->
+    <nav id="topbar" class="fullbar">
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
+            <ul>
+                <li><a class="link nav" href="index.html#work">work</a></li>
+                <li><a class="link nav" href="index.html#about">about</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <canvas id="canvas-basic"></canvas>
+        <div class="wrap">
+            <div class="tagline">
+                <h1>Prophia <span>Scaling Critical Processes with Machine Learning</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <section>
+        <div class="wrap">
+
+            <h2>Background</h2>
+            <p>
+                For the Commercial Real Estate (CRE) firm, there is no source of business data
+                more critical than the lease document; it drives cash flows, budget projections,
+                buying/selling strategies, etc. Unfortunately, this data source suffers from a
+                debilitating flaw––it is always in the form of a physical document locked in a
+                fireproof cabinet, or a PDF lost in a jumbled share drive, which leads to
+                several downstream problems:
+            </p>
+            <ul>
+                <li>Lack of scalability: lease administrators must manually refer to the
+                    document to answer all but the simplest questions.
+                <li>Organizational inefficiency: since this data isn’t extensible, it must be
+                    manually entered into all other 3rd-party systems (i.e. accounting, budgeting,
+                    etc.).
+                <li>Data discrepancies: the more removed data gets from the source document the
+                    higher the likelihood of error.
+                </li>
+            </ul>
+            <p>
+                The Prophia platform solves these problems by extracting critical lease data
+                straight from the source document, presenting it in a standardized, dynamic, and
+                extensible manner, and it does so at scale.
+            </p>
+            <div class="gallery">
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/tether.jpg">
+                            <img src="assets/img/proj-prophia-ml/tether.jpg">
+                        </a>
+                    </div>
+                    <p>Prophia connects lease data, and everything that is built on top of it, back to the original
+                        document</p>
+                </div>
+            </div>
+            <p>
+                But how did we get here?
+            </p>
+            <h2>Phase 1: Establishing a baseline manual process</h2>
+            <p>
+                For Prophia MVP, we started off with a manual process; our in-house team of
+                “onboarders” would read the lease document, “tag” the critical data, categorize
+                it, and transform it into the required format.
+            </p>
+            <p>
+                I worked with the CPO, Chief Architect, and Sr. SDE to determine the core user
+                stories we needed to support. For instance:
+            </p>
+            <ul>
+                <li>Both the customer and internal user need to be able to read the lease
+                    document
+                <li>The internal user needs to be able to capture a relevant section of text and
+                    translate the underlying data into a standardized format
+                <li>Both user types need to see which data points are captured in the document,
+                    their textual source, and their output into our system
+                <li>Etc.
+                </li>
+            </ul>
+            <h3>Ideation</h3>
+            <p>
+                Not wanting to reinvent the wheel, I looked at existing
+                products that involve both the viewing of a document and the capture of
+                important data within it:
+            </p>
+            <div class="gallery">
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/docusign.jpg">
+                            <img src="assets/img/proj-prophia-ml/docusign.jpg">
+                        </a>
+                    </div>
+                    <p>Marking up a document with different types of metadata in Docusign</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/acrobat.jpg">
+                            <img src="assets/img/proj-prophia-ml/acrobat.jpg">
+                        </a>
+                    </div>
+                    <p>The many different ways of annotating/marking up a document in Adobe Acrobat</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/hellosign.jpg">
+                            <img src="assets/img/proj-prophia-ml/hellosign.jpg">
+                        </a>
+                    </div>
+                    <p>Navigating through and viewing important metadata in HelloSign</p>
+                </div>
+            </div>
+            <p>I spent the next 2 sprints ideating on the core workflow of the data capture
+                process:</p>
+            <div class="gallery">
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/sketch-1.jpg">
+                            <img src="assets/img/proj-prophia-ml/sketch-1.jpg">
+                        </a>
+                    </div>
+                    <p>Sketching a user flow for the process of highlighting data to capture within a lease document</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/sketch-2.jpg">
+                            <img src="assets/img/proj-prophia-ml/sketch-2.jpg">
+                        </a>
+                    </div>
+                    <p>Sketching a user flow for the process of marking up highlighted data within a lease document</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/wireframe-1.jpg">
+                            <img src="assets/img/proj-prophia-ml/wireframe-1.jpg">
+                        </a>
+                    </div>
+                    <p>Wireframe of the overall layout and structure of the document viewer</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/wireframe-2.jpg">
+                            <img src="assets/img/proj-prophia-ml/wireframe-2.jpg">
+                        </a>
+                    </div>
+                    <p>Wireframe of the "edit pane" in context: where the onboarder actually captures the relevant data
+                    </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/wireflow-1.jpg">
+                            <img src="assets/img/proj-prophia-ml/wireflow-1.jpg">
+                        </a>
+                    </div>
+                    <p>A more fleshed-out user flow of the process of capturing a data point</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/hifi-1.jpg">
+                            <img src="assets/img/proj-prophia-ml/hifi-1.jpg">
+                        </a>
+                    </div>
+                    <p>A hi-fi concept of the interaction design mechanism for selecting what kind of data is about to be
+                        captured: a data point, link to another document, or a comment</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/hifi-2.jpg">
+                            <img src="assets/img/proj-prophia-ml/hifi-2.jpg">
+                        </a>
+                    </div>
+                    <p>A hi-fi concept of the document's table of contents</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/hifi-3.jpg">
+                            <img src="assets/img/proj-prophia-ml/hifi-3.jpg">
+                        </a>
+                    </div>
+                    <p>Another hi-fi concept containing all the core elements of the document viewer: table of contents,
+                        document, "mode switcher", "edit pane", etc.</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/alt-nav-1.jpg">
+                            <img src="assets/img/proj-prophia-ml/alt-nav-1.jpg">
+                        </a>
+                    </div>
+                    <p>An exploration of an alternate navigation/IA structure</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/alt-nav-2.jpg">
+                            <img src="assets/img/proj-prophia-ml/alt-nav-2.jpg">
+                        </a>
+                    </div>
+                    <p>Another exploration of an alternate navigation/IA structure</p>
+                </div>
+            </div>
+            <p>
+                Once I felt reasonably confident, I tested prototypes of my proposed workflows with internal
+                stakeholders, most importantly the team of onboarders. I refined my designs based on this feedback and
+                delivered the spec for this critical feature.
+            </p>
+            <h2>Phase 2: Scaling the process w/ Machine Learning</h2>
+            <p>
+                As we signed up more beta customers, no path to scalability was possible without
+                leveraging Machine Learning to interpret and extract the data. The whole product
+                team worked collaboratively to assess the feasibility of various solutions, and
+                how to operationalize them in the UX. Our approach was divided into 3 stages:
+            </p>
+            <p>
+                <strong>Stage 1 </strong>(near-term)<strong>: </strong>The model lacks
+                sufficient training data to make accurate predictions of the meaning of the
+                text. However, it is capable of alerting the onboarder that a portion of text
+                appears “significant”.
+            </p>
+            <p>
+                <strong>Stage 2 </strong>(near-term)<strong>: </strong>Once we are sufficiently
+                confident in the training data, build a model that predicts which data points
+                are likely to be found within a significant section of text. Surface these
+                predictions to the onboarder for human verification.
+            </p>
+            <p>
+                <strong>Stage 3 </strong>(longer-term)<strong>: </strong>Automatically capture
+                data points where the model has demonstrated its predictive abilities with
+                sufficient accuracy
+            </p>
+            <p>
+                I focused my efforts on stages 1 & 2 since we had greater confidence in our
+                ability to deliver on them. I experimented with several concepts for how best to
+                indicate where significant portions of text lie, and what they might contain:
+            </p>
+            <div class="gallery">
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/docatlas-1.jpg">
+                            <img src="assets/img/proj-prophia-ml/docatlas-1.jpg">
+                        </a>
+                    </div>
+                    <p>Stage 1 concept: the model highlights a paragraph of significance</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/docatlas-2.jpg">
+                            <img src="assets/img/proj-prophia-ml/docatlas-2.jpg">
+                        </a>
+                    </div>
+                    <p>A paragraph of significance may span multiple pages. This is a comparison between explicitly highlighting the paragraph and merely ppointing to it </p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/docatlas-3.jpg">
+                            <img src="assets/img/proj-prophia-ml/docatlas-3.jpg">
+                        </a>
+                    </div>
+                    <p>Stage 2 concept: the model is able to predict which data point/s lie in a paragraph</p>
+                </div>
+                <div class="figure">
+                    <div>
+                        <a href="#" data-featherlight="assets/img/proj-prophia-ml/docatlas-4.jpg">
+                            <img src="assets/img/proj-prophia-ml/docatlas-4.jpg">
+                        </a>
+                    </div>
+                    <p>An all-together view of the ML-powered features, including siggestions in the document, a suggestions ToC, and a custom scrollbar with suggestion indicators</p>
+                </div>
+            </div>
+            <p>
+                After prototyping and testing these concepts with our onboarders, a clear area
+                of improvement was findability; many leases are hundreds of pages long and
+                suggestions are useless unless the onboarder knows that they exist and where to
+                find them. My solution involved a suggestions table of contents, and a custom
+                scrollbar indicating the locations of each.
+            </p>
+            <h3>Measuring Results</h3>
+            <p>
+                As it turns out, measuring the performance of these features proved devilishly
+                hard, because:
+            </p>
+            <ul>
+                <li>We’re constantly hiring new onboarders, each of which experiences a learning
+                    curve with interpreting lease documents
+                <li>The onboarding team is continually updating and improving their processes
+                <li>We continually increase the number of data points we capture
+                <li>Etc.
+                </li>
+            </ul>
+            <p>
+                Despite this difficulty, a clear demonstration of the value of our ML-aided data
+                capture is the fact that we are now capturing more data points via ML than have
+                ever been captured by human onboarders. This ML-powered ingress, extraction, and
+                interpretation pipeline is in no small part responsible for our success in
+                expanding with existing customers, signing up new customers, and securing VC
+                investment.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- previous/next project -->
+    <div class="project-nav">
+        <div class="direction">
+            <a href="prophia-mvp.html" rel="prev" title="Next Project: Prophia MVP">
+                <div>
+                    <span class="previous">Previous Project</span>
+                    <h3>Prophia MVP</h3>
+                </div>
+            </a>
+        </div>
+        <div class="direction">
+            <a href="socrata-connected-government-cloud.html" rel="next"
+                title="Next Project: Socrata Connected Government Cloud">
+                <div>
+                    <span class="next">Next Project</span>
+                    <h3>Socrata Connected Government Cloud</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="wrap">
+            <div class="logo-wrap">
+                <a href="index.html"><img src="assets/img/logo/logo-white.png" height="50px" width="50px"
+                        alt="logo-white.png" /></a>
+            </div>
+            <ul class="footer-links">
+                <li><a class="link nav" href="resume.pdf" target="_blank">resum&eacute;</a></li>
+                <li><a class="link nav" href="http://www.linkedin.com/in/leormaizel/" target="_blank">linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/granim.min.js"></script>
+    <script>
+        //Gradient genrator for header section
+        var granimInstance = new Granim({
+            element: '#canvas-basic',
+            name: 'basic-gradient',
+            direction: 'left-right',
+            opacity: [1, 1],
+            isPausedWhenNotInView: true,
+            states: {
+                "default-state": {
+                    gradients: [
+                        ['#5EC883', '#5DC7BB'],
+                        ['#5DC7BB', '#5EC883']
+                    ]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
