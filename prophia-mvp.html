@@ -9,16 +9,27 @@
     <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNQ7Y6P8V7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GNQ7Y6P8V7');
+    </script>
 </head>
 
 <body class="portfolio-project proj-1 prophia-mvp">
 
     <!-- header -->
     <nav id="global-nav">
-		<div class="nav-wrap">
-			<div class="logo-wrap">
-				<a href="index.html"></a>
-			</div>
+        <div class="nav-wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
             <ul>
                 <li><a class="link nav" href="index.html#work">work</a></li>
                 <li><a class="link nav" href="index.html#about">about</a></li>
@@ -79,9 +90,9 @@
                 <li>The decision-makers versus the potential platform users</li>
                 <li>Which opportunities are untapped in the competitive landscape</li>
                 <li>The inter-organizational complexity of different product
-                directions. I.e. some solutions can deliver value to just the CRE firm, whereas
-                others require adoption by others, such as lawyers, brokers,
-                and banks</li>
+                    directions. I.e. some solutions can deliver value to just the CRE firm, whereas
+                    others require adoption by others, such as lawyers, brokers,
+                    and banks</li>
             </ul>
             <h2>MVP Strategy</h2>
             <p>
@@ -246,7 +257,8 @@
                 <p>
                     The Prophia MVP was released on September 18th, 2018. My ongoing research and
                     validation work with Design Partners continues to inform our product
-                    prioritization, and we’ve seen <span class="emphasis">steady quarterly growth</span> in new customers and
+                    prioritization, and we’ve seen <span class="emphasis">steady quarterly growth</span> in new
+                    customers and
                     especially in expansions ever since.
                 </p>
         </div>
@@ -292,14 +304,14 @@
     <script src="js/granim.min.js"></script>
     <script>
         // Nav bar transition effect after scrolling >1 pixel
-		$(window).scroll(function () {
-			var scroll = $(window).scrollTop();
-			if (scroll >= 1) {
-				$("#global-nav").addClass("nav-bg-visible");
-			} else {
-				$("#global-nav").removeClass("nav-bg-visible");
-			}
-		});
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 1) {
+                $("#global-nav").addClass("nav-bg-visible");
+            } else {
+                $("#global-nav").removeClass("nav-bg-visible");
+            }
+        });
         //Gradient genrator for header section
         var granimInstance = new Granim({
             element: '#canvas-basic',

@@ -9,16 +9,27 @@
     <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNQ7Y6P8V7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GNQ7Y6P8V7');
+    </script>
 </head>
 
 <body class="portfolio-project proj-4 uno">
 
     <!-- header -->
     <nav id="global-nav">
-		<div class="nav-wrap">
-			<div class="logo-wrap">
-				<a href="index.html"></a>
-			</div>
+        <div class="nav-wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
             <ul>
                 <li><a class="link nav" href="index.html#work">work</a></li>
                 <li><a class="link nav" href="index.html#about">about</a></li>
@@ -192,12 +203,12 @@
             </p>
             <div class="gallery no-flexbox">
                 <div class="figure">
-                    
-                        <iframe
-                            src="https://docs.google.com/presentation/d/e/2PACX-1vSIvYs2qPiLIVhok_y5sJvy3CPX-kwklYusg3gKcVtnS5kt3KJ5StroH1GibpFVFGS7Sljq1yQ9YsuI/embed?start=false&amp;loop=false&amp;delayms=3000"
-                            frameborder="0" width="328" height="214" allowfullscreen="true" mozallowfullscreen="true"
-                            webkitallowfullscreen="true"></iframe>
-                    
+
+                    <iframe
+                        src="https://docs.google.com/presentation/d/e/2PACX-1vSIvYs2qPiLIVhok_y5sJvy3CPX-kwklYusg3gKcVtnS5kt3KJ5StroH1GibpFVFGS7Sljq1yQ9YsuI/embed?start=false&amp;loop=false&amp;delayms=3000"
+                        frameborder="0" width="328" height="214" allowfullscreen="true" mozallowfullscreen="true"
+                        webkitallowfullscreen="true"></iframe>
+
                     <p>An in-depth analysis of the IA tree test</p>
                 </div>
             </div>
@@ -273,14 +284,14 @@
     <script src="js/granim.min.js"></script>
     <script>
         // Nav bar transition effect after scrolling >1 pixel
-		$(window).scroll(function () {
-			var scroll = $(window).scrollTop();
-			if (scroll >= 1) {
-				$("#global-nav").addClass("nav-bg-visible");
-			} else {
-				$("#global-nav").removeClass("nav-bg-visible");
-			}
-		});
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 1) {
+                $("#global-nav").addClass("nav-bg-visible");
+            } else {
+                $("#global-nav").removeClass("nav-bg-visible");
+            }
+        });
         //Gradient genrator for header section
         var granimInstance = new Granim({
             element: '#canvas-basic',

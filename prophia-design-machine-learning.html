@@ -10,16 +10,27 @@
     <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNQ7Y6P8V7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GNQ7Y6P8V7');
+    </script>
 </head>
 
 <body class="portfolio-project proj-2 prophia-ml">
 
     <!-- header -->
     <nav id="global-nav">
-		<div class="nav-wrap">
-			<div class="logo-wrap">
-				<a href="index.html"></a>
-			</div>
+        <div class="nav-wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
             <ul>
                 <li><a class="link nav" href="index.html#work">work</a></li>
                 <li><a class="link nav" href="index.html#about">about</a></li>
@@ -80,7 +91,8 @@
             </p>
             <h2>Phase 1: Establishing a baseline manual process</h2>
             <p>
-                For MVP, we knew we'd need to start off with a manual process; I needed to build an experience whereby our in-house team of
+                For MVP, we knew we'd need to start off with a manual process; I needed to build an experience whereby
+                our in-house team of
                 “onboarders” could read the lease document, “tag” the critical data, categorize
                 it, and transform it into the required format.
             </p>
@@ -166,7 +178,8 @@
                             <img src="assets/img/proj-prophia-ml/hifi-1.jpg">
                         </a>
                     </div>
-                    <p>A hi-fi concept of the interaction design mechanism for selecting what kind of data is about to be
+                    <p>A hi-fi concept of the interaction design mechanism for selecting what kind of data is about to
+                        be
                         captured: a data point, link to another document, or a comment</p>
                 </div>
                 <div class="figure">
@@ -216,24 +229,24 @@
                 how to operationalize them in the UX. Our approach was divided into 3 stages:
             </p>
             <ul>
-            <li>
-                Stage 1: The model lacks
-                sufficient training data to make accurate predictions of the meaning of the
-                text. However, it is capable of alerting the onboarder that a portion of text
-                appears “significant”.
-            </li>
-            <li>
-                Stage 2: Once we are sufficiently
-                confident in the training data, build a model that predicts which data points
-                are likely to be found within a significant portion of text. Surface these
-                predictions to the onboarder for human verification.
-            </li>
-            <li>
-                Stage 3: Automatically capture
-                data points where the model has demonstrated its predictive abilities with
-                sufficient accuracy
-            </li>
-        </ul>
+                <li>
+                    Stage 1: The model lacks
+                    sufficient training data to make accurate predictions of the meaning of the
+                    text. However, it is capable of alerting the onboarder that a portion of text
+                    appears “significant”.
+                </li>
+                <li>
+                    Stage 2: Once we are sufficiently
+                    confident in the training data, build a model that predicts which data points
+                    are likely to be found within a significant portion of text. Surface these
+                    predictions to the onboarder for human verification.
+                </li>
+                <li>
+                    Stage 3: Automatically capture
+                    data points where the model has demonstrated its predictive abilities with
+                    sufficient accuracy
+                </li>
+            </ul>
             <p>
                 I focused my efforts on stages 1 & 2 since we had greater confidence in our
                 ability to deliver on them. I experimented with several concepts for how best to
@@ -254,7 +267,8 @@
                             <img src="assets/img/proj-prophia-ml/docatlas-2.jpg">
                         </a>
                     </div>
-                    <p>A paragraph of significance may span multiple pages. This is a comparison between explicitly highlighting the paragraph and merely pointing to it </p>
+                    <p>A paragraph of significance may span multiple pages. This is a comparison between explicitly
+                        highlighting the paragraph and merely pointing to it </p>
                 </div>
                 <div class="figure">
                     <div>
@@ -270,7 +284,8 @@
                             <img src="assets/img/proj-prophia-ml/docatlas-4.jpg">
                         </a>
                     </div>
-                    <p>An all-together view of the ML-powered features, including suggestions in the document, a suggestions ToC, and a custom scrollbar with suggestion indicators</p>
+                    <p>An all-together view of the ML-powered features, including suggestions in the document, a
+                        suggestions ToC, and a custom scrollbar with suggestion indicators</p>
                 </div>
             </div>
             <p>
@@ -294,10 +309,12 @@
                 </li>
             </ul>
             <p>
-                Despite this difficulty, a clear demonstration of value is the fact that we are now capturing <span class="emphasis">more data points via ML</span> than have
+                Despite this difficulty, a clear demonstration of value is the fact that we are now capturing <span
+                    class="emphasis">more data points via ML</span> than have
                 ever been captured by human onboarders. This ML-powered ingress, extraction, and
                 interpretation pipeline is in no small part responsible for our success in
-                expanding with existing customers, signing up new customers, and <span class="emphasis">securing VC investment.</span>
+                expanding with existing customers, signing up new customers, and <span class="emphasis">securing VC
+                    investment.</span>
             </p>
         </div>
     </section>
@@ -342,14 +359,14 @@
     <script src="js/granim.min.js"></script>
     <script>
         // Nav bar transition effect after scrolling >1 pixel
-		$(window).scroll(function () {
-			var scroll = $(window).scrollTop();
-			if (scroll >= 1) {
-				$("#global-nav").addClass("nav-bg-visible");
-			} else {
-				$("#global-nav").removeClass("nav-bg-visible");
-			}
-		});
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 1) {
+                $("#global-nav").addClass("nav-bg-visible");
+            } else {
+                $("#global-nav").removeClass("nav-bg-visible");
+            }
+        });
         //Gradient genrator for header section
         var granimInstance = new Granim({
             element: '#canvas-basic',

@@ -9,16 +9,27 @@
     <link rel="stylesheet" type="text/css" href="css/featherlight.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNQ7Y6P8V7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GNQ7Y6P8V7');
+    </script>
 </head>
 
 <body class="portfolio-project proj-5 booking">
 
     <!-- header -->
     <nav id="global-nav">
-		<div class="nav-wrap">
-			<div class="logo-wrap">
-				<a href="index.html"></a>
-			</div>
+        <div class="nav-wrap">
+            <div class="logo-wrap">
+                <a href="index.html"></a>
+            </div>
             <ul>
                 <li><a class="link nav" href="index.html#work">work</a></li>
                 <li><a class="link nav" href="index.html#about">about</a></li>
@@ -41,7 +52,8 @@
 
             <h2>Background</h2>
             <p>
-                As described in the previous project, <a class="link" href="bookingsuite-uno.html">BookingSuite Uno</a>, the MVP of
+                As described in the previous project, <a class="link" href="bookingsuite-uno.html">BookingSuite Uno</a>,
+                the MVP of
                 BookingSuite’s all-in-one hotel
                 management product took a dramatic turn just as it had entered pilot.
                 Booking.com (the parent company of BookingSuite) already had a platform (the
@@ -74,7 +86,8 @@
                             <img src="assets/img/proj-booking/old-home.jpg">
                         </a>
                     </div>
-                    <p>A screen of the Booking.com hotelier extranet "Today" page. With a vastly different IA and featureset, redesigning Uno would be quite the challenge.
+                    <p>A screen of the Booking.com hotelier extranet "Today" page. With a vastly different IA and
+                        featureset, redesigning Uno would be quite the challenge.
                     </p>
                 </div>
             </div>
@@ -206,11 +219,14 @@
             </p>
             <p>
                 The results of the test were overwhelmingly positive. My design increased
-                next-step actions, such as hosts responding to guest messages by <span class="emphasis">391%</span>. Measured
-                by this metric, this experiment was in the <span class="emphasis">97th percentile</span> of all experiments
+                next-step actions, such as hosts responding to guest messages by <span class="emphasis">391%</span>.
+                Measured
+                by this metric, this experiment was in the <span class="emphasis">97th percentile</span> of all
+                experiments
                 tracked at Booking.com (although this probably resulted from the fact that my
                 design changes were much larger in scope than normal). The redesigned
-                dashboard decreased inbound support requests, saving more than <span class="emphasis">700</span> customer
+                dashboard decreased inbound support requests, saving more than <span class="emphasis">700</span>
+                customer
                 support hours per quarter.
             </p>
             <h2>Conclusion</h2>
@@ -265,14 +281,14 @@
     <script src="js/granim.min.js"></script>
     <script>
         // Nav bar transition effect after scrolling >1 pixel
-		$(window).scroll(function () {
-			var scroll = $(window).scrollTop();
-			if (scroll >= 1) {
-				$("#global-nav").addClass("nav-bg-visible");
-			} else {
-				$("#global-nav").removeClass("nav-bg-visible");
-			}
-		});
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 1) {
+                $("#global-nav").addClass("nav-bg-visible");
+            } else {
+                $("#global-nav").removeClass("nav-bg-visible");
+            }
+        });
         //Gradient genrator for header section
         var granimInstance = new Granim({
             element: '#canvas-basic',

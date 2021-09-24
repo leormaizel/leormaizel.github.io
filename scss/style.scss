@@ -825,32 +825,32 @@ Pages: Portfolio Projects
     }
 
     iframe.no-gallery {
-        margin-bottom:2rem;
+        margin-bottom: 2rem;
     }
 
-    blockquote{
+    blockquote {
         @include vollkorn();
         @include font-size(1);
         width: 80%;
         margin: 1rem auto;
         padding: 1.5em 3em;
-        border-left: 8px solid lighten($viking, 20) ;
+        border-left: 8px solid lighten($viking, 20);
         position: relative;
         background: lighten($viking, 45);
-      
-      
-      &::before{
-        content: "\201C";
-        color: $viking;
-        font-size: 4em;
-        position: absolute;
-        left: 10px;
-        top: 35px;
-      }
 
-      .attrib {
-          margin-top: 0.5rem;
-      }
+
+        &::before {
+            content: "\201C";
+            color: $viking;
+            font-size: 4em;
+            position: absolute;
+            left: 10px;
+            top: 35px;
+        }
+
+        .attrib {
+            margin-top: 0.5rem;
+        }
     }
 }
 
