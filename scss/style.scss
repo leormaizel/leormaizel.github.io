@@ -586,7 +586,7 @@ Pages: Index
     background-image: url(../assets/img/banner/index.jpg);
 
     .tagline {
-        padding-top: 10rem;
+        padding-top: 14rem;
         text-align: center;
 
         h1 {
@@ -1032,15 +1032,15 @@ Media Queries
             width: 90%;
         }
 
-        header .tagline {
-            h1 {
-                @include font-size(1.8);
+        // header .tagline {
+        //     h1 {
+        //         @include font-size(2.2);
 
-                span {
-                    @include font-size(1);
-                }
-            }
-        }
+        //         span {
+        //             @include font-size(1.4);
+        //         }
+        //     }
+        // }
 
         section ul {
             padding-left: 2rem;
