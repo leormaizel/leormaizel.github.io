@@ -37,7 +37,6 @@
 		</div>
 	</nav>
 	<header>
-		<canvas id="canvas-basic"></canvas>
 		<div class="wrap">
 			<div class="tagline">
 				<h1>leor maizel</h1>
@@ -180,24 +179,6 @@
 					}
 				}
 			});
-		});
-		//Gradient genrator for header section
-		var granimInstance = new Granim({
-			element: '#canvas-basic',
-			name: 'basic-gradient',
-			direction: 'left-right',
-			isPausedWhenNotInView: true,
-			states: {
-				"default-state": {
-					gradients: [
-						['#2BABB1', '#35CDAC'],
-						['#35CD88', '#2B98B1'],
-						['#35CDAC', '#2BABB1'],
-						['#3592CD', '#2BB174']
-					],
-					transitionSpeed: 3000
-				}
-			}
 		});
 	</script>
 </body>

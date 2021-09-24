@@ -39,7 +39,6 @@
     </nav>
 
     <header>
-        <canvas id="canvas-basic"></canvas>
         <div class="wrap">
             <div class="tagline">
                 <h1>Socrata Connected Government Cloud<span>Internal Data Sharing & Collaboration for Government</span>
@@ -343,23 +342,6 @@
                 $("#global-nav").addClass("nav-bg-visible");
             } else {
                 $("#global-nav").removeClass("nav-bg-visible");
-            }
-        });
-        //Gradient genrator for header section
-        var granimInstance = new Granim({
-            element: '#canvas-basic',
-            name: 'basic-gradient',
-            direction: 'left-right',
-            opacity: [1, 1],
-            isPausedWhenNotInView: true,
-            states: {
-                "default-state": {
-                    gradients: [
-                        ['#40B3B9', '#4186BA'],
-                        ['#4186BA', '#40B3B9']
-                    ],
-                    transitionSpeed: 3000
-                }
             }
         });
     </script>

@@ -404,8 +404,9 @@ header {
         height: 100%;
     }
 
-    #canvas-basic {
-        opacity: .7;
+    #canvas-basic,
+    #canvas-complex {
+        opacity: .75;
         position: absolute;
         display: block;
         width: 100%;
@@ -582,7 +583,7 @@ Pages: Index
 
 .index header {
     height: 40rem;
-    background-image: url(../assets/img/banner/forest.jpg);
+    background-image: url(../assets/img/banner/index.jpg);
 
     .tagline {
         padding-top: 10rem;
@@ -704,7 +705,7 @@ Pages: Portfolio Projects
 .portfolio-project {
 
     header {
-        height: 20rem;
+        height: 30rem;
         padding-bottom: 1rem;
 
         .tagline {

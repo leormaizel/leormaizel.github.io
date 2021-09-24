@@ -38,7 +38,6 @@
     </nav>
 
     <header>
-        <canvas id="canvas-basic"></canvas>
         <div class="wrap">
             <div class="tagline">
                 <h1>BookingSuite Uno<span>The All-in-One Platform for Hotels</span></h1>
@@ -290,23 +289,6 @@
                 $("#global-nav").addClass("nav-bg-visible");
             } else {
                 $("#global-nav").removeClass("nav-bg-visible");
-            }
-        });
-        //Gradient genrator for header section
-        var granimInstance = new Granim({
-            element: '#canvas-basic',
-            name: 'basic-gradient',
-            direction: 'left-right',
-            opacity: [1, 1],
-            isPausedWhenNotInView: true,
-            states: {
-                "default-state": {
-                    gradients: [
-                        ['#0061FF', '#60EFFF'],
-                        ['#60EFFF', '#0061FF']
-                    ],
-                    transitionSpeed: 3000
-                }
             }
         });
     </script>
