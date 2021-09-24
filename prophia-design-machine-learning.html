@@ -15,11 +15,11 @@
 <body class="portfolio-project proj-2 prophia-ml">
 
     <!-- header -->
-    <nav id="topbar" class="fullbar">
-        <div class="wrap">
-            <div class="logo-wrap">
-                <a href="index.html"></a>
-            </div>
+    <nav id="global-nav">
+		<div class="nav-wrap">
+			<div class="logo-wrap">
+				<a href="index.html"></a>
+			</div>
             <ul>
                 <li><a class="link nav" href="index.html#work">work</a></li>
                 <li><a class="link nav" href="index.html#about">about</a></li>
@@ -31,7 +31,7 @@
         <canvas id="canvas-basic"></canvas>
         <div class="wrap">
             <div class="tagline">
-                <h1>Prophia <span>Scaling Critical Processes with Machine Learning</span></h1>
+                <h1>Prophia <span>Designing for Scale with Machine Learning</span></h1>
             </div>
         </div>
     </header>
@@ -44,13 +44,13 @@
             <p>
                 For the Commercial Real Estate (CRE) firm, there is no source of business data
                 more critical than the lease document; it drives cash flows, budget projections,
-                buying/selling strategies, etc. Unfortunately, this data source suffers from a
-                debilitating flaw––it is always in the form of a physical document locked in a
-                fireproof cabinet, or a PDF lost in a jumbled share drive, which leads to
+                buying/selling strategies, etc. Unfortunately, this data suffers from a
+                debilitating flaw&mdash;it is always in the form of a physical document locked in a
+                fireproof cabinet, or a PDF lost in a jumbled share drive, leading to
                 several downstream problems:
             </p>
             <ul>
-                <li>Lack of scalability: lease administrators must manually refer to the
+                <li>Non-scalability: lease administrators must manually refer to the
                     document to answer all but the simplest questions.
                 <li>Organizational inefficiency: since this data isn’t extensible, it must be
                     manually entered into all other 3rd-party systems (i.e. accounting, budgeting,
@@ -71,7 +71,7 @@
                             <img src="assets/img/proj-prophia-ml/tether.jpg">
                         </a>
                     </div>
-                    <p>Prophia connects lease data, and everything that is built on top of it, back to the original
+                    <p>Prophia connects lease data and everything that is built on top of it back to the original
                         document</p>
                 </div>
             </div>
@@ -80,24 +80,10 @@
             </p>
             <h2>Phase 1: Establishing a baseline manual process</h2>
             <p>
-                For Prophia MVP, we started off with a manual process; our in-house team of
-                “onboarders” would read the lease document, “tag” the critical data, categorize
+                For MVP, we knew we'd need to start off with a manual process; I needed to build an experience whereby our in-house team of
+                “onboarders” could read the lease document, “tag” the critical data, categorize
                 it, and transform it into the required format.
             </p>
-            <p>
-                I worked with the CPO, Chief Architect, and Sr. SDE to determine the core user
-                stories we needed to support. For instance:
-            </p>
-            <ul>
-                <li>Both the customer and internal user need to be able to read the lease
-                    document
-                <li>The internal user needs to be able to capture a relevant section of text and
-                    translate the underlying data into a standardized format
-                <li>Both user types need to see which data points are captured in the document,
-                    their textual source, and their output into our system
-                <li>Etc.
-                </li>
-            </ul>
             <h3>Ideation</h3>
             <p>
                 Not wanting to reinvent the wheel, I looked at existing
@@ -229,23 +215,25 @@
                 team worked collaboratively to assess the feasibility of various solutions, and
                 how to operationalize them in the UX. Our approach was divided into 3 stages:
             </p>
-            <p>
-                <strong>Stage 1 </strong>(near-term)<strong>: </strong>The model lacks
+            <ul>
+            <li>
+                Stage 1: The model lacks
                 sufficient training data to make accurate predictions of the meaning of the
                 text. However, it is capable of alerting the onboarder that a portion of text
                 appears “significant”.
-            </p>
-            <p>
-                <strong>Stage 2 </strong>(near-term)<strong>: </strong>Once we are sufficiently
+            </li>
+            <li>
+                Stage 2: Once we are sufficiently
                 confident in the training data, build a model that predicts which data points
-                are likely to be found within a significant section of text. Surface these
+                are likely to be found within a significant portion of text. Surface these
                 predictions to the onboarder for human verification.
-            </p>
-            <p>
-                <strong>Stage 3 </strong>(longer-term)<strong>: </strong>Automatically capture
+            </li>
+            <li>
+                Stage 3: Automatically capture
                 data points where the model has demonstrated its predictive abilities with
                 sufficient accuracy
-            </p>
+            </li>
+        </ul>
             <p>
                 I focused my efforts on stages 1 & 2 since we had greater confidence in our
                 ability to deliver on them. I experimented with several concepts for how best to
@@ -266,7 +254,7 @@
                             <img src="assets/img/proj-prophia-ml/docatlas-2.jpg">
                         </a>
                     </div>
-                    <p>A paragraph of significance may span multiple pages. This is a comparison between explicitly highlighting the paragraph and merely ppointing to it </p>
+                    <p>A paragraph of significance may span multiple pages. This is a comparison between explicitly highlighting the paragraph and merely pointing to it </p>
                 </div>
                 <div class="figure">
                     <div>
@@ -282,7 +270,7 @@
                             <img src="assets/img/proj-prophia-ml/docatlas-4.jpg">
                         </a>
                     </div>
-                    <p>An all-together view of the ML-powered features, including siggestions in the document, a suggestions ToC, and a custom scrollbar with suggestion indicators</p>
+                    <p>An all-together view of the ML-powered features, including suggestions in the document, a suggestions ToC, and a custom scrollbar with suggestion indicators</p>
                 </div>
             </div>
             <p>
@@ -300,18 +288,16 @@
             <ul>
                 <li>We’re constantly hiring new onboarders, each of which experiences a learning
                     curve with interpreting lease documents
-                <li>The onboarding team is continually updating and improving their processes
-                <li>We continually increase the number of data points we capture
+                <li>The onboarding team is continuously updating and improving their processes
+                <li>We regularly add to the number of data points we capture
                 <li>Etc.
                 </li>
             </ul>
             <p>
-                Despite this difficulty, a clear demonstration of the value of our ML-aided data
-                capture is the fact that we are now capturing more data points via ML than have
+                Despite this difficulty, a clear demonstration of value is the fact that we are now capturing <span class="emphasis">more data points via ML</span> than have
                 ever been captured by human onboarders. This ML-powered ingress, extraction, and
                 interpretation pipeline is in no small part responsible for our success in
-                expanding with existing customers, signing up new customers, and securing VC
-                investment.
+                expanding with existing customers, signing up new customers, and <span class="emphasis">securing VC investment.</span>
             </p>
         </div>
     </section>
@@ -323,7 +309,7 @@
             <a href="prophia-mvp.html" rel="prev" title="Next Project: Prophia MVP">
                 <div>
                     <span class="previous">Previous Project</span>
-                    <h3>Prophia MVP</h3>
+                    <div class="proj-name">Prophia MVP</div>
                 </div>
             </a>
         </div>
@@ -332,7 +318,7 @@
                 title="Next Project: Socrata Connected Government Cloud">
                 <div>
                     <span class="next">Next Project</span>
-                    <h3>Socrata Connected Government Cloud</h3>
+                    <div class="proj-name">Socrata Connected Government Cloud</div>
                 </div>
             </a>
         </div>
@@ -355,6 +341,15 @@
     <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/granim.min.js"></script>
     <script>
+        // Nav bar transition effect after scrolling >1 pixel
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+			if (scroll >= 1) {
+				$("#global-nav").addClass("nav-bg-visible");
+			} else {
+				$("#global-nav").removeClass("nav-bg-visible");
+			}
+		});
         //Gradient genrator for header section
         var granimInstance = new Granim({
             element: '#canvas-basic',
@@ -367,7 +362,8 @@
                     gradients: [
                         ['#5EC883', '#5DC7BB'],
                         ['#5DC7BB', '#5EC883']
-                    ]
+                    ],
+                    transitionSpeed: 3000
                 }
             }
         });

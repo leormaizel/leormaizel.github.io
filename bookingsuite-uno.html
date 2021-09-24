@@ -14,11 +14,11 @@
 <body class="portfolio-project proj-4 uno">
 
     <!-- header -->
-    <nav id="topbar" class="fullbar">
-        <div class="wrap">
-            <div class="logo-wrap">
-                <a href="index.html"></a>
-            </div>
+    <nav id="global-nav">
+		<div class="nav-wrap">
+			<div class="logo-wrap">
+				<a href="index.html"></a>
+			</div>
             <ul>
                 <li><a class="link nav" href="index.html#work">work</a></li>
                 <li><a class="link nav" href="index.html#about">about</a></li>
@@ -30,7 +30,7 @@
         <canvas id="canvas-basic"></canvas>
         <div class="wrap">
             <div class="tagline">
-                <h1>BookingSuite Uno</h1>
+                <h1>BookingSuite Uno<span>The All-in-One Platform for Hotels</span></h1>
             </div>
         </div>
     </header>
@@ -79,7 +79,7 @@
                             <img src="assets/img/proj-uno/notebook.jpg">
                         </a>
                     </div>
-                    <p>For many hotels, a paper notepad like the one you see here is the database, rolodex, and personal
+                    <p>For many hotels, a paper notepad is the database, rolodex, and personal
                         assistant for the property
                     </p>
                 </div>
@@ -115,7 +115,7 @@
             <p>
                 Having just been acquired by Booking.com, BookingSuite (FKA Buuteeq), was the
                 former’s first foray into SaaS. Uno aimed to bring all of these disparate
-                elements into one package. No player dominated this space, and if successful Uno
+                hospitality software functions into one package. No player dominated this space, and if successful Uno
                 could disrupt the entire industry.
             </p>
             <h2>My Role</h2>
@@ -185,19 +185,19 @@
             <h2>Quantitative Testing</h2>
             <p>
                 Before investing too many resources in development, we wanted to validate our
-                proposed core IA structure. I helped carry out a series of statistically
+                proposed core IA structure. I carried out a series of statistically
                 significant reverse card-sort tests (tree tests) with over 10,000 hotel partners
                 in Italy, Spain, the UK, and the US. A major outcome of the test was the finding
                 that we had nested pages too many levels deep for users to comfortably navigate.
             </p>
             <div class="gallery no-flexbox">
                 <div class="figure">
-                    <div>
+                    
                         <iframe
                             src="https://docs.google.com/presentation/d/e/2PACX-1vSIvYs2qPiLIVhok_y5sJvy3CPX-kwklYusg3gKcVtnS5kt3KJ5StroH1GibpFVFGS7Sljq1yQ9YsuI/embed?start=false&amp;loop=false&amp;delayms=3000"
                             frameborder="0" width="328" height="214" allowfullscreen="true" mozallowfullscreen="true"
                             webkitallowfullscreen="true"></iframe>
-                    </div>
+                    
                     <p>An in-depth analysis of the IA tree test</p>
                 </div>
             </div>
@@ -240,7 +240,7 @@
                 title="Next Project: Socrata Connected Government Cloud">
                 <div>
                     <span class="previous">Previous Project</span>
-                    <h3>Socrata Connected Government Cloud</h3>
+                    <div class="proj-name">Socrata Connected Government Cloud</div>
                 </div>
             </a>
         </div>
@@ -249,7 +249,7 @@
                 title="Next Project: Booking.com: Improving Host/Guest Communication">
                 <div>
                     <span class="next">Next Project</span>
-                    <h3>Booking.com: Improving Host/Guest Communication</h3>
+                    <div class="proj-name">Booking.com: Improving Host/Guest Communication</div>
                 </div>
             </a>
         </div>
@@ -272,6 +272,15 @@
     <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/granim.min.js"></script>
     <script>
+        // Nav bar transition effect after scrolling >1 pixel
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+			if (scroll >= 1) {
+				$("#global-nav").addClass("nav-bg-visible");
+			} else {
+				$("#global-nav").removeClass("nav-bg-visible");
+			}
+		});
         //Gradient genrator for header section
         var granimInstance = new Granim({
             element: '#canvas-basic',
@@ -284,7 +293,8 @@
                     gradients: [
                         ['#0061FF', '#60EFFF'],
                         ['#60EFFF', '#0061FF']
-                    ]
+                    ],
+                    transitionSpeed: 3000
                 }
             }
         });

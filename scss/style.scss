@@ -1,4 +1,3 @@
-
 /* 
 -------------------------------------------------------- 
 Reset
@@ -8,48 +7,135 @@ Reset
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* 
@@ -73,57 +159,7 @@ $near-black: #222222;
 /* ----- breakpoints ----- */
 
 $med: 56.25rem;
-
-/*
--------------------------------------------------------- 
-Base Typography
--------------------------------------------------------- 
-*/
-
-@mixin font-size($size: 1.6, $line: $size * 1.58) {
-    font-size: $size + rem;
-    line-height: $line + rem;
-}
-
-@font-face {
-    font-family: 'vollkorn';
-    src: url("../assets/fonts/vollkorn.eot");
-    src: url("../assets/fonts/vollkorn.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/vollkorn.woff") format("woff"), url("../assets/fonts/vollkorn.ttf") format("truetype"), url("../assets/fonts/vollkorn.svg#OpenSansRegular") format("svg");
-    font-weight: 100;
-    font-style: 100;
-}
-
-@font-face {
-    font-family: 'avenir';
-    src: url("../assets/fonts/Avenir-Light.eot?") format("eot"), url("../assets/fonts/Avenir-Light.otf") format("opentype"), url("../assets/fonts/Avenir-Light.woff") format("woff"), url("../assets/fonts/Avenir-Light.ttf") format("truetype"), url("../assets/fonts/Avenir-Light.svg#AvenirLTStd-Light") format("svg");
-    font-weight: 100;
-    font-style: 100;
-}
-
-html {
-    @include font-size(1);
-}
-
-body {
-    font-family: 'avenir', sans-serif;
-}
-
-h1 {
-    @include font-size(2.2);
-}
-
-h2 {
-    @include font-size(1.8);
-}
-
-h3 {
-    @include font-size(1.2);
-}
-
-p {
-    @include font-size(1);
-}
-
+$small: 20rem;
 /*
 -------------------------------------------------------- 
 Mixins
@@ -138,7 +174,7 @@ Mixins
     #{$name}: #{$argument};
 }
 
-@mixin transition($transition-property: all, $transition-time: 0.5s, $method: ease) {
+@mixin transition($transition-property: all, $transition-time: 0.3s, $method: ease) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
     -ms-transition: $transition-property $transition-time $method;
@@ -146,13 +182,88 @@ Mixins
     transition: $transition-property $transition-time $method;
 }
 
+@mixin avenir {
+    font-family: 'avenir', helvetica, sans-serif;
+}
+
+@mixin vollkorn {
+    font-family: 'vollkorn', georgia, serif;
+
+}
+
+/*
+-------------------------------------------------------- 
+Base Typography
+-------------------------------------------------------- 
+*/
+
+@mixin font-size($size: 1.6, $line: $size * 1.58) {
+    font-size: $size + rem;
+    line-height: $line + rem;
+}
+
+@font-face {
+    font-family: 'vollkorn';
+    src:
+        url("../assets/fonts/vollkorn.eot") format("eot"),
+        url("../assets/fonts/vollkorn.woff") format("woff"),
+        url("../assets/fonts/vollkorn.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'avenir';
+    src:
+        url("../assets/fonts/Avenir-Semi-Bold.eot?") format("eot"),
+        url("../assets/fonts/Avenir-Semi-Bold.woff") format("woff"),
+        url("../assets/fonts/Avenir-Semi-Bold.ttf") format("truetype");
+}
+
+html {
+    @include font-size(1);
+}
+
+body {
+    @include avenir;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    @include avenir;
+}
+
+h1 {
+    @include font-size(2.2);
+}
+
+h2 {
+    @include font-size(1.8);
+}
+
+h3 {
+    @include font-size(1.4);
+}
+
+h4 {
+    @include font-size(1.15);
+}
+
+p {
+    @include font-size(1);
+    @include vollkorn;
+}
+
+
 /* 
 -------------------------------------------------------- 
 Global
 -------------------------------------------------------- 
 */
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     @include vendor-prefix(box-sizing, border-box);
 }
 
@@ -169,27 +280,22 @@ a {
     text-decoration: none;
 }
 
-.wrap {
+.wrap,
+.nav-wrap {
     width: 80%;
     max-width: 75rem;
     margin: auto;
 }
 
-/* ----- Global: Links ----- */
+
+
+ul {
+    @include font-size(1);
+}
 
 .link {
     display: inline-block;
     position: relative;
-    @include transition; 
-
-    span {
-        position: relative;
-        color: $viking;
-        background: $viking;
-        @include vendor-prefix(background-clip, text);
-        -webkit-text-fill-color: transparent;
-        @include transition;
-    };
 
     &:after {
         content: '';
@@ -199,7 +305,7 @@ a {
         position: absolute;
         bottom: -4px;
         left: 0;
-        @include transition;
+        @include transition(width);
     }
 
     &:hover:after {
@@ -207,52 +313,19 @@ a {
     }
 }
 
-.nav.link {
-    color: $white;
-
-    span {
-        color: #fff;
-        background: #fff;
-        @include vendor-prefix(background-clip, text);
-        -webkit-text-fill-color: transparent;
-    };
-
-    &:after {
-        background-color: $white;
-    }
-}
-
-nav.fullbar .nav.link {
-    color: $near-black;
-
-    span {
-        color: $near-black;
-        background: $near-black;
-        @include vendor-prefix(background-clip, text);
-        -webkit-text-fill-color: transparent;
-    }
-
-    &:after {
-        background-color: $near-black;
-    }
-}
-
 /* ----- Global: Nav ----- */
 
-.logo-wrap a {
-    display: block;
-    height: 50px;
-    width: 50px;
-}
-
 nav {
+    background-color: rgba(255, 255, 255, 0);
     position: fixed;
-    z-index: 9999;
+    z-index: 3;
     width: 100%;
     top: 0;
     padding: .5em;
+    @include vendor-prefix(box-shadow, 0px 0px 8px 1px rgba(168, 168, 168, 0));
+    @include transition(all, 0.5s, ease);
 
-    .wrap {
+    .nav-wrap {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -260,7 +333,9 @@ nav {
     }
 
     .logo-wrap a {
-        background: url(../assets/img/logo/logo-white.png) center center no-repeat;
+        background-image: url(../assets/img/logo/logo-white.png);
+        background-position: center center;
+        background-repeat: no-repeat;
         background-size: contain;
     }
 
@@ -270,23 +345,48 @@ nav {
 
         li {
             margin-left: 3rem;
+
+            a {
+                color: rgba(255, 255, 255, 1);
+                @include transition(color, 0.5s, ease);
+            }
         }
     }
 }
 
-nav.fullbar {
-    background: $white;
-    @include transition(all, 0.5s, ease-in-out);
-    @include vendor-prefix(box-shadow, 0px 0px 8px 1px rgba(168,168,168,0.5));
+nav.nav-bg-visible {
+    background: rgba(255, 255, 255, 1);
+    @include vendor-prefix(box-shadow, 0px 0px 8px 1px rgba(168, 168, 168, 0.5));
+
 
     .logo-wrap a {
-        background: url(../assets/img/logo/logo-black.png) center center no-repeat;
-        background-size: contain;
+        background-image: url(../assets/img/logo/logo-black.png);
     }
 
     li a {
-        color: $near-black;
+        color: rgba(255, 255, 255, 0);
     }
+}
+
+a.link.nav {
+
+    &:after {
+        background-color: $white;
+    }
+}
+
+nav.nav-bg-visible a.link.nav {
+    color: $near-black;
+
+    &:after {
+        background-color: $near-black;
+    }
+}
+
+.logo-wrap a {
+    display: block;
+    height: 50px;
+    width: 50px;
 }
 
 /* ----- Global: Header ----- */
@@ -343,8 +443,12 @@ footer {
         justify-content: center;
 
         li {
-             margin: 0 2rem;
-             display: flex;
+            margin: 0 2rem;
+            display: flex;
+
+            a {
+                color: $white;
+            }
         }
     }
 }
@@ -358,17 +462,21 @@ Color Coordination
 /* ----- Footer Gradient ----- */
 
 .proj-1 footer {
-    background: linear-gradient(-270deg, hsla(196, 63%, 56%, 1) 0%, hsla(181, 61%, 35%, 1) 100%);
+    background: linear-gradient(-270deg, hsla(196, 63%, 56%, 1) 0%, hsla(181, 64%, 26%, 1) 100%);
 }
+
 .proj-2 footer {
     background: linear-gradient(-270deg, hsla(141, 49%, 58%, 1) 0%, hsla(173, 49%, 57%, 1) 100%);
 }
+
 .proj-3 footer {
     background: linear-gradient(-270deg, hsla(183, 49%, 49%, 1) 0%, hsla(206, 48%, 49%, 1) 100%);
 }
+
 .proj-4 footer {
     background: linear-gradient(-270deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
 }
+
 .proj-5 footer {
     background: linear-gradient(-270deg, hsla(192, 76%, 41%, 1) 0%, hsla(208, 75%, 41%, 1) 100%);
 }
@@ -381,57 +489,70 @@ Color Coordination
     justify-content: center;
 
     li:nth-child(1) a {
-      background-color: $picton-blue;
-      &:hover{
-        background-color: darken($picton-blue, 10%);
-      }
+        background-color: $picton-blue;
+
+        &:hover {
+            background-color: darken($picton-blue, 10%);
+        }
     }
+
     li:nth-child(2) a {
-      background-color: $emerald;
-      &:hover{
-        background-color: darken($emerald, 10%);
-      }
+        background-color: $emerald;
+
+        &:hover {
+            background-color: darken($emerald, 10%);
+        }
     }
+
     li:nth-child(3) a {
-      background-color: $viking;
-      &:hover{
-        background-color: darken($viking, 10%);
-      }
+        background-color: $viking;
+
+        &:hover {
+            background-color: darken($viking, 10%);
+        }
     }
+
     li:nth-child(4) a {
-      background-color: $cornflower;
-      &:hover{
-        background-color: darken($cornflower, 10%);
-      }
+        background-color: $cornflower;
+
+        &:hover {
+            background-color: darken($cornflower, 10%);
+        }
     }
+
     li:nth-child(5) a {
-      background-color: $pelorous;
-      &:hover{
-        background-color: darken($pelorous, 10%);
-      }
+        background-color: $pelorous;
+
+        &:hover {
+            background-color: darken($pelorous, 10%);
+        }
     }
 }
 
 /* ----- Project Page Lines ----- */
 
-.portfolio-project.prophia-mvp .project-nav span.next:before,
-.portfolio-project.prophia-mvp .project-nav span.previous:after {
+.portfolio-project.proj-1 .project-nav span.next:before,
+.portfolio-project.proj-1 .project-nav span.previous:after {
     background: $picton-blue;
 }
-.portfolio-project.prophia-ml .project-nav span.next:before,
-.portfolio-project.prophia-ml .project-nav span.previous:after {
+
+.portfolio-project.proj-2 .project-nav span.next:before,
+.portfolio-project.proj-2 .project-nav span.previous:after {
     background: $emerald;
 }
-.portfolio-project.scgc .project-nav span.next:before,
-.portfolio-project.scgc .project-nav span.previous:after {
+
+.portfolio-project.proj-3 .project-nav span.next:before,
+.portfolio-project.proj-3 .project-nav span.previous:after {
     background: $viking;
 }
-.portfolio-project.uno .project-nav span.next:before,
-.portfolio-project.uno .project-nav span.previous:after {
+
+.portfolio-project.proj-4 .project-nav span.next:before,
+.portfolio-project.proj-4 .project-nav span.previous:after {
     background: $cornflower;
 }
-.portfolio-project.booking .project-nav span.next:before,
-.portfolio-project.booking .project-nav span.previous:after {
+
+.portfolio-project.proj-5 .project-nav span.next:before,
+.portfolio-project.proj-5 .project-nav span.previous:after {
     background: $pelorous;
 }
 
@@ -446,7 +567,7 @@ Pages: Index
         padding-top: 4rem;
         padding-bottom: 4rem;
 
-        &:nth-child(odd){
+        &:nth-child(odd) {
             background: $light-gray;
         }
     }
@@ -482,22 +603,16 @@ Pages: Index
 .index .quotes {
     color: $charcoal;
     text-align: center;
-
-        div {
-          @include font-size(2);
-        }
+    @include font-size(1);
 
     blockquote {
-        font-family: 'vollkorn', sans-serif;
+        @include vollkorn;
         margin: auto;
         max-width: 700px;
-        @include font-size(1);
     }
 
     .attrib {
-        font-family: 'vollkorn', sans-serif;
         margin-top: 2rem;
-        @include font-size(1);
     }
 }
 
@@ -509,7 +624,7 @@ Pages: Index
     justify-content: center;
 
     li.headliner {
-      width: 50%;
+        width: 50%;
     }
 
     li {
@@ -525,7 +640,7 @@ Pages: Index
             flex-grow: 1;
             @include transition;
 
-            .project-title{
+            .project-title {
                 background-color: rgba(255, 255, 255, 0.3);
                 color: $white;
                 padding: 1.5rem;
@@ -534,9 +649,9 @@ Pages: Index
             }
 
             p {
-              font-family: 'vollkorn', sans-serif;
-              color: $white;
-              padding: 1.5rem;
+                @include vollkorn;
+                color: $white;
+                padding: 1.5rem;
             }
         }
     }
@@ -549,10 +664,27 @@ Pages: Index
     .wrap {
         max-width: 700px;
     }
-    
+
+    img {
+        float: left;
+        margin: 0 1rem 1rem 0;
+        width: 10rem;
+        border-radius: 3px;
+    }
+
     p {
         margin-bottom: 1rem;
-        font-family: 'vollkorn', sans-serif;
+    }
+
+    ul {
+        font-family: 'vollkorn', serif;
+        margin: 1rem 0 1rem;
+        padding-left: 3rem;
+
+        li {
+            list-style-type: disc;
+            margin: .5rem 0;
+        }
     }
 
     .contact {
@@ -572,45 +704,53 @@ Pages: Portfolio Projects
 .portfolio-project {
 
     header {
-    height: 20rem;
-    padding-bottom: 1rem;
+        height: 20rem;
+        padding-bottom: 1rem;
 
         .tagline {
             position: absolute;
             bottom: 1px;
             text-align: left;
 
-            h1 {
-                @include font-size(2.2);
-
-                span {
-                    display: block;
-                    @include font-size(1.6);
-                }
+            h1 span {
+                display: block;
+                @include font-size(1.6);
             }
         }
     }
 }
 
 .portfolio-project.proj-1 header {
-    background-image: url(../assets/img/banner/city.jpg) ;
+    background-image: url(../assets/img/banner/city.jpg);
 }
+
 .portfolio-project.proj-2 header {
-    background-image: url(../assets/img/banner/city-2.jpg) ;
+    background-image: url(../assets/img/banner/city-2.jpg);
 }
+
 .portfolio-project.proj-3 header {
-    background-image: url(../assets/img/banner/gov.jpg) ;
+    background-image: url(../assets/img/banner/gov.jpg);
 }
+
 .portfolio-project.proj-4 header {
-    background-image: url(../assets/img/banner/hotel.jpg) ;
+    background-image: url(../assets/img/banner/hotel.jpg);
 }
+
 .portfolio-project.proj-5 header {
-    background-image: url(../assets/img/banner/hotel-2.jpg) ;
+    background-image: url(../assets/img/banner/hotel-2.jpg);
 }
 
 /* ----- Portflio Projects: Content ----- */
 
 .portfolio-project {
+
+    .emphasis {
+        display: inline-block;
+        margin: 0 0.1em;
+        background-color: lighten($viking, 40);
+        padding: 0px 5px;
+        border-radius: 3px;
+    }
 
     .wrap {
         max-width: 45rem;
@@ -618,38 +758,22 @@ Pages: Portfolio Projects
 
     section {
         padding-bottom: 2rem;
-        font-family:'vollkorn', serif;
 
         ul {
-            @include font-size(1);
+            @include vollkorn;
             margin: 1rem 0 1rem;
             padding-left: 3rem;
-    
-            li{
+
+            li {
                 list-style-type: disc;
                 margin: .5rem 0;
             }
         }
 
         h2 {
-            font-family: 'avenir', sans-serif;
-            position: relative;
-    
-            &:after {
-                content: "";
-                position: absolute;
-                margin-left: 0.5em;
-                top: 36%;
-                width: 3rem;
-                height: 2px;
-            }
-        }
-    
-        h2, 
-        h3 {
             margin-top: 3rem;
         }
-    
+
         p {
             margin: 1rem 0 1rem;
         }
@@ -667,35 +791,66 @@ Pages: Portfolio Projects
             flex-wrap: wrap;
         }
 
-            .figure {
-                margin: 1rem;
-                width: 320px;
-                
+        .figure {
+            margin: 1rem;
+            width: 320px;
 
-                div {
+
+            div {
                 max-height: 320px;
                 overflow: hidden;
                 border: 1px solid rgb(235, 235, 236);
-                }
-
-                img {
-                    width: 100%;
-                }
             }
 
-            p {
-                @include font-size(0.9);
-            }
-
-            & > p {
-                display: block;
+            img {
                 width: 100%;
-                text-align: center;
-                margin-bottom: 2rem;
             }
+        }
+
+        p {
+            @include font-size(0.9);
+            color: $charcoal;
+        }
+
+        &>p {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
         &.no-flexbox .figure {
             margin: auto;
         }
+    }
+
+    iframe.no-gallery {
+        margin-bottom:2rem;
+    }
+
+    blockquote{
+        @include vollkorn();
+        @include font-size(1);
+        width: 80%;
+        margin: 1rem auto;
+        padding: 1.5em 3em;
+        border-left: 8px solid lighten($viking, 20) ;
+        position: relative;
+        background: lighten($viking, 45);
+      
+      
+      &::before{
+        content: "\201C";
+        color: $viking;
+        font-size: 4em;
+        position: absolute;
+        left: 10px;
+        top: 35px;
+      }
+
+      .attrib {
+          margin-top: 0.5rem;
+      }
     }
 }
 
@@ -732,27 +887,27 @@ Pages: Portfolio Projects
 }
 
 .featherlight-loading .featherlight-content {
-  -webkit-animation: featherlightLoader 1s infinite linear;
-          animation: featherlightLoader 1s infinite linear;
-  background: transparent;
-  border: 8px solid #8f8f8f;
-  border-left-color: #fff;
-  border-radius: 80px;
-  width: 80px;
-  height: 80px;
-  min-width: 0;
+    -webkit-animation: featherlightLoader 1s infinite linear;
+    animation: featherlightLoader 1s infinite linear;
+    background: transparent;
+    border: 8px solid #8f8f8f;
+    border-left-color: #fff;
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+    min-width: 0;
 }
 
-.featherlight-loading .featherlight-content > * {
-  display: none !important;
+.featherlight-loading .featherlight-content>* {
+    display: none !important;
 }
 
 .featherlight-loading .featherlight-close,
 .featherlight-loading .featherlight-inner {
-  display: none;
+    display: none;
 }
- 
- /* ----- Portflio Projects: Project Navigator ----- */
+
+/* ----- Portflio Projects: Project Navigator ----- */
 
 .portfolio-project {
 
@@ -764,7 +919,7 @@ Pages: Portfolio Projects
         display: flex;
         justify-content: space-between;
 
-        & > div:nth-child(2) {
+        &>div:nth-child(2) {
             border-left: 2px solid $white;
 
             a div {
@@ -782,34 +937,39 @@ Pages: Portfolio Projects
             }
 
             span {
-                font-family: 'avenir', sans-serif;
+                @include avenir;
                 text-transform: uppercase;
                 letter-spacing: 0.2rem;
                 position: relative;
                 margin: 1rem 0 1rem;
-                @include font-size (0.8);
-        
+                @include font-size (0.75);
+
                 &.next:before,
                 &.previous:after {
                     content: "";
                     position: absolute;
-                    margin-right: 0.5em;
+                    margin-left: 0.3em;
                     top: 36%;
                     width: 3rem;
                     height: 2px;
                 }
 
                 &.next:before {
-                    left: -44%;
+                    left: -46%;
                 }
             }
 
-            a { 
+            .proj-name {
+                @include font-size(1);
+
+            }
+
+            a {
                 padding: 5rem 0;
                 display: flex;
                 justify-content: center;
 
-                div a{
+                div a {
                     text-align: left;
                     display: inline-block;
                 }
@@ -830,22 +990,96 @@ Media Queries
 
 @media all and (max-width: $med) {
 
-    .portfolio-project .project-nav {
-        display: block;
+    .index {
 
-        .direction.previous {
-            border-bottom: 2px solid $white;
+        .wrap,
+        .nav-wrap {
+            width: 90%;
         }
 
+        header {
+
+            .tagline {
+                h1 {
+                    @include font-size(4)
+                }
+
+                h2 {
+                    @include font-size(2)
+                }
+            }
+        }
+
+        .projects-wrap {
+
+            li,
+            li.headliner {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+
+        .about ul {
+            padding-left: 2rem;
+        }
     }
 
-    .index {
-        .projects-wrap li,
-        .projects-wrap li.featured {
+    .portfolio-project {
+
+        .wrap,
+        .nav-wrap {
+            width: 90%;
+        }
+
+        header .tagline {
+            h1 {
+                @include font-size(1.8);
+
+                span {
+                    @include font-size(1);
+                }
+            }
+        }
+
+        section ul {
+            padding-left: 2rem;
+        }
+
+        .gallery .figure {
+            margin: 1rem 0;
+            width: auto;
+        }
+
+        iframe {
             width: 100%;
-            padding-right: 0;
+        }
+
+        .project-nav .direction {
+            a {
+                padding: 1.5rem;
+            }
+
+            span {
+                @include font-size(0.65)
+            }
+
+            .proj-name {
+                @include font-size(0.8);
+                margin-top: 0.5rem;
+            }
+
+            span.next:before,
+            span.previous:after {
+                width: 0px;
+            }
         }
     }
 }
 
+@media all and (max-width: $small) {
 
+    .gallery .figure,
+    .gallery.no-flexbox .figure {
+        max-width: 288px;
+    }
+}

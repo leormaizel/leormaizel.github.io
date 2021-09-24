@@ -14,11 +14,11 @@
 <body class="portfolio-project proj-5 booking">
 
     <!-- header -->
-    <nav id="topbar" class="fullbar">
-        <div class="wrap">
-            <div class="logo-wrap">
-                <a href="index.html"></a>
-            </div>
+    <nav id="global-nav">
+		<div class="nav-wrap">
+			<div class="logo-wrap">
+				<a href="index.html"></a>
+			</div>
             <ul>
                 <li><a class="link nav" href="index.html#work">work</a></li>
                 <li><a class="link nav" href="index.html#about">about</a></li>
@@ -61,15 +61,11 @@
                 the Extranet had different design patterns and a different core IA. Most
                 importantly, Booking.com practices a radically different design philosophy;
                 whereas the team at BookingSuite was accustomed to designing large-scale
-                greenfield products, Booking.com is organizationally devoted to small-scale A/B
+                green field products, Booking.com is organizationally devoted to small-scale A/B
                 testing, in which the most minute change must be defended with statistical
                 significance. I needed to redesign all of the features of Uno in a phased
                 approach; I’d design for the least amount of change, A/B test, and then proceed
                 to the next phase.
-            </p>
-            <p>
-                A screen of the Booking.com extranet. With a vastly different IA, redesigning
-                Uno would be a huge challenge.
             </p>
             <div class="gallery">
                 <div class="figure">
@@ -96,10 +92,10 @@
 
             </ul>
             <p>
-                The Extranet’s hotelier dashboard (for a subset of its hotel partners) had some
+                The Extranet’s hotelier dashboard had some
                 of this functionality but lacked many of the features that were important to
                 Uno’s value proposition. Before I added features to the dashboard, I wanted to
-                gain a baseline sense of what was and wasn’t working well.
+                see a baseline of what was and wasn’t working well.
             </p>
             <p>
                 I conducted remote usability tests with 14 different hotel partners in Europe,
@@ -112,12 +108,12 @@
             <ul>
                 <li>CSAT numbers for the Extranet were extremely poor</li>
                 <li>The existing dashboard was far too information-dense; it showed guest
-                    arrivals and departures, recent booking.com reviews, new bookings, and messages
+                    arrivals and departures, recent Booking.com reviews, new bookings, and messages
                     sent from the guest all together with no discernable content hierarchy or
                     separation</li>
                 <li>As a result, users were not reliably able to find any specific piece of
                     information, such as when a guest might be arriving today. This led to
-                    disastrous outcomes in which hoteliers would frequently missing a critical guest
+                    disastrous outcomes in which hoteliers would frequently miss a critical guest
                     message. One such instance was relayed with great embarrassment by the owner of
                     a hotel in Amsterdam: “it wasn’t just ‘Hi, can I have another pillow?’, it is
                     things like ‘I’m getting to the airport at 3 am, how can I get to your hotel?’
@@ -131,7 +127,7 @@
                 For some items, like arrivals and departures, chronology was of paramount
                 importance; the hotelier needed to know which guests were arriving/departing
                 first. For other items, like new guest reviews, chronology was trivial—it
-                mattered less when the event occurred than simply notifying the hotelier that it
+                mattered less when the event occurred than that it
                 occurred.
             </p>
             <div class="gallery">
@@ -204,17 +200,17 @@
                 Normally, after coming up with a proposed design, my first instinct would be to
                 prototype and test the designs in moderated usability sessions. However, the
                 culture at Booking.com heavily favored A/B testing over more qualitative
-                measures. In hindsight, I would have pushed harder to fit a qualitative
+                methods. In hindsight, I would have pushed harder to fit a qualitative
                 evaluation stage into my process, but as a new member of the Booking.com org, I
                 didn’t feel I had the organizational clout to push the envelope quite yet.
             </p>
             <p>
                 The results of the test were overwhelmingly positive. My design increased
-                next-step actions, such as hosts responding to guest messages by <span class="crazy-booking-stat">391%</span>. Measured
-                by this metric, this experiment was in the 97th percentile of all experiments
-                ever run at Booking.com (although this probably resulted from the fact that the
-                design changes were much larger in scope than was normal). The redesigned
-                dashboard decreased inbound support requests, saving more than 700 customer
+                next-step actions, such as hosts responding to guest messages by <span class="emphasis">391%</span>. Measured
+                by this metric, this experiment was in the <span class="emphasis">97th percentile</span> of all experiments
+                tracked at Booking.com (although this probably resulted from the fact that my
+                design changes were much larger in scope than normal). The redesigned
+                dashboard decreased inbound support requests, saving more than <span class="emphasis">700</span> customer
                 support hours per quarter.
             </p>
             <h2>Conclusion</h2>
@@ -237,7 +233,7 @@
             <a href="bookingsuite-uno.html" rel="prev" title="Next Project: BookingSuite Uno">
                 <div>
                     <span class="previous">Previous Project</span>
-                    <h3>BookingSuite Uno</h3>
+                    <div class="proj-name">BookingSuite Uno</div>
                 </div>
             </a>
         </div>
@@ -245,7 +241,7 @@
             <a href="prophia-mvp.html" rel="next" title="Next Project: Prophia MVP">
                 <div>
                     <span class="next">Next Project</span>
-                    <h3>Prophia MVP</h3>
+                    <div class="proj-name">Prophia MVP</div>
                 </div>
             </a>
         </div>
@@ -268,6 +264,15 @@
     <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/granim.min.js"></script>
     <script>
+        // Nav bar transition effect after scrolling >1 pixel
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+			if (scroll >= 1) {
+				$("#global-nav").addClass("nav-bg-visible");
+			} else {
+				$("#global-nav").removeClass("nav-bg-visible");
+			}
+		});
         //Gradient genrator for header section
         var granimInstance = new Granim({
             element: '#canvas-basic',
@@ -280,7 +285,8 @@
                     gradients: [
                         ['#1998B7', '#1A6EB8'],
                         ['#1A6EB8', '#1998B7']
-                    ]
+                    ],
+                    transitionSpeed: 3000
                 }
             }
         });
