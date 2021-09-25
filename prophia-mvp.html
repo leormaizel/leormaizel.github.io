@@ -52,46 +52,45 @@
             <h2>Background</h2>
             <p>
                 Prophia (FKA Leaseable) is a platform that enables Commercial Real Estate (CRE)
-                firms to aggregate, manage, and leverage unstructured lease data to
+                firms to leverage their unstructured lease data to
                 drive better portfolio performance.
             </p>
             <p>
-                When I joined as employee #2, none of this was true&mdash;yet. The founders had only
-                a hypothesis: the inefficiency inherent in CRE processes represents an
-                opportunity for technological innovation. But what form that should take was unknown.
+                When I joined as employee #2, the platform didn't exist yet, only
+                a hypothesis: the inefficiency endemic to CRE represents an
+                opportunity for technological innovation. But what form that might take was unknown.
             </p>
             <h2>Validating the Problem Space</h2>
             <p>
-                Before we built anything, our founding team met with 12 CRE executives from
+                Before we built anything, the founding team met with 12 CRE
                 firms ranging from boutique to REITs and pre-sold a hypothetical product to see
                 which value propositions garnered the most interest.
             </p>
             <ul>
-                <li>Lease Management: giving CRE firms better insight into the contents of their
+                <li>Lease Management: giving CRE firms better insight into their
                     lease portfolios</li>
-                <li>Transactional Efficiency: enabling CRE firms to track deals, lease
+                <li>Transactional Efficiency: enabling CRE firms to track deals,
                     negotiations, and collaborate as a team</li>
                 <li>Data Insights: providing authoritative benchmarking/market comp data</li>
             </ul>
             <p>
-                As the sole/founding designer I put together a conceptual design that
-                incorporated these 3 potential directions:
+                As the sole/founding designer I put together conceptual designs that
+                incorporated these 3 directions:
             </p>
             <iframe class="no-gallery" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
                 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBJiX9DNtyGa3RmMfbUyv0R%2FFrank-Robinson%3Fnode-id%3D2%253A3%26scaling%3Dmin-zoom%26page-id%3D0%253A1"
                 allowfullscreen></iframe>
             <p>
-                With the findings from our interviews, we developed a working understanding of:
+                With findings from our interviews, we developed a working understanding of:
             </p>
             <ul>
                 <li>The organizational differences between CRE firms of different sizes</li>
-                <li>The different job roles within each firm type</li>
-                <li>The decision-makers versus the potential platform users</li>
-                <li>Which opportunities are untapped in the competitive landscape</li>
-                <li>The inter-organizational complexity of different product
-                    directions. I.e. some solutions can deliver value to just the CRE firm, whereas
-                    others require adoption by others, such as lawyers, brokers,
-                    and banks</li>
+                <li>The job roles within each firm type</li>
+                <li>The decision-makers versus the platform users</li>
+                <li>The opportunities untapped in the competitive landscape</li>
+                <li>The inter-organizational complexity of our ideas. I.e. some solutions could deliver value to just the CRE firm, whereas
+                    others required adoption lawyers, brokers,
+                    and banks as well</li>
             </ul>
             <h2>MVP Strategy</h2>
             <p>
@@ -106,40 +105,39 @@
                 extensible, nor dynamic
             </p>
             <p>
-                Furthermore, leases are inherently complex; landlords must employ massive resources
+                Furthermore, leases are inherently complex; landlords must deploy massive resources
                 to create standardized summaries of the key points of the lease to mitigate this
                 complexity.
             </p>
             <h3>#2: No single source of truth</h3>
             <p>
-                Since lease data is locked away in dumb, lifeless documents, an entire solar
-                system of brittle reporting revolves around it; Excel reports are pockmarked with
-                broken references; uncertainty reigns over which report is the most up-to-date;
-                there are frequent data discrepancies between vendor software systems like
-                accounting, cash-flow projection, etc., where no one can be sure of the correct
-                figures without looking at the physical document.
+                An entire solar
+                system of brittle reporting revolves around the lease document; Excel reports are pockmarked with
+                broken references; uncertainty reigns over which report is up-to-date;
+                data is frequently inconsistent between vendor software systems like
+                accounting, budgeting, etc.
             </p>
             <h3>#3: Endless low-level busywork</h3>
             <p>
-                CRE firms have burdensome reporting obligations to stakeholders such as lenders,
-                capital partners, limited partners, the SEC, etc. Analysts regularly need to
-                generate critical reports cobbled together from numerous disparate systems, and
-                from the legal documents themselves&mdash;for every single building the firm owns!
+                CRE firms have rigorous reporting obligations to stakeholders such as lenders,
+                capital partners, limited partners, the SEC, etc. Analysts regularly
+                generate critical reports cobbled together from disparate systems and
+                legal documents &mdash;for every single building. 
             </p>
             <p>
                 In addition, the daily, bread-and-butter work of managing leases falls to the
-                armies of lease administrators who dig through the complex
+                armies of lease administrators who wade through the complex
                 legalese of these documents to determine legal obligations.
             </p>
             <h3>MVP Features</h3>
             <p>
-                Given the target problems we hoped to solve, the Chief Architect, CPO, and I
+                Given the problems we hoped to solve, the Chief Architect, CPO, and I
                 brainstormed the key features of our MVP:<br>
             </p>
             <ul>
-                <li>A digitized version of each lease contract, where the document is keyword
+                <li>A digitized version of each lease contract, which is keyword
                     searchable, and where the key provisions of the lease are marked and summarized</li>
-                <li>A process that enables our internal team to mark and annotate each
+                <li>A process that enables our internal team to capture each
                     data point in each document</li>
                 <li>A standardized and accessible “lease summary” in which the most critical
                     data is summarized</li>
@@ -149,22 +147,21 @@
             <h3>Design Process</h3>
             <p>
                 I’d never designed anything from scratch before; in every previous role, the
-                universe of endless possibilities had already been collapsed into an existing
-                IA/UI. But designing Prophia was an exercise in having zero constraints&mdash;an
+                universe of possibilities had already been collapsed into an existing
+                IA/UI. But Prophia had zero constraints&mdash;an
                 experience simultaneously nerve-wracking and liberating.
             </p>
             <p>
-                Several of the key questions I considered were:
+                Several of my key considerations:
             </p>
             <ul>
-                <li>What are the key pieces of content on the app? What are their primary
-                    differentiators? Are they hierarchical in nature, or flat?</li>
+                <li>What are the key pieces of content and their differentiators? Are this content hierarchical in nature, or flat?</li>
                 <li>What are the key anticipated user paths throughout this content?</li>
             </ul>
             <p>
-                I sought to follow as closely as possible the paradigms I observed were
-                familiar to people in CRE, knowing of course that none of my designs would fully
-                stand the test of time and that future designers would curse my name.
+                I sought to follow closely the paradigms that I observed were
+                familiar to those in CRE, knowing that none of my designs would fully
+                stand the test of time and that future designers would invariably curse my name.
                 <div class="gallery">
                     <div class="figure">
                         <div>
@@ -243,7 +240,7 @@
                 <h2>Feedback from Design Partners</h2>
                 <p>
                     Prophia is an enterprise-level SaaS product; It isn’t cheap, it can’t be used
-                    instantly upon sign-up, and the decision to subscribe to it involves long sales
+                    instantly upon sign-up, and it involves long sales
                     cycles. For these reasons, the Prophia MVP could not have succeeded without our
                     Design Partners&mdash;8 CRE firms of different sizes who provided monthly feedback. I
                     ran (and continue to run) this program, geared toward:
@@ -257,8 +254,7 @@
                     The Prophia MVP was released on September 18th, 2018. My ongoing research and
                     validation work with Design Partners continues to inform our product
                     prioritization, and we’ve seen <span class="emphasis">steady quarterly growth</span> in new
-                    customers and
-                    especially in expansions ever since.
+                    customers and expansions ever since.
                 </p>
         </div>
     </section>

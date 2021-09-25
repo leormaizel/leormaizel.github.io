@@ -451,8 +451,8 @@ Color Coordination
 }
 
 .proj-4 footer {
-  background: -webkit-gradient(linear, left top, right top, from(#0062ff), to(#61efff));
-  background: linear-gradient(-270deg, #0062ff 0%, #61efff 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#0062ff), to(#50cad8));
+  background: linear-gradient(-270deg, #0062ff 0%, #50cad8 100%);
 }
 
 .proj-5 footer {

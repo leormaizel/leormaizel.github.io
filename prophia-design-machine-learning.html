@@ -54,25 +54,25 @@
             <p>
                 For the Commercial Real Estate (CRE) firm, there is no source of business data
                 more critical than the lease document; it drives cash flows, budget projections,
-                buying/selling strategies, etc. Unfortunately, this data suffers from a
-                debilitating flaw&mdash;it is always in the form of a physical document locked in a
-                fireproof cabinet, or a PDF lost in a jumbled share drive, leading to
+                buying/selling strategies, etc. Unfortunately, this data always takes the form of a physical document
+                locked in a
+                fireproof cabinet, or a PDF lost in a jumbled share drive, which leads to
                 several downstream problems:
             </p>
             <ul>
                 <li>Non-scalability: lease administrators must manually refer to the
-                    document to answer all but the simplest questions.
-                <li>Organizational inefficiency: since this data isn’t extensible, it must be
-                    manually entered into all other 3rd-party systems (i.e. accounting, budgeting,
+                    lease to answer all but the simplest questions.
+                <li>Organizational inefficiency: Key lease terms must be
+                    manually entered into all 3rd-party systems (i.e. accounting, budgeting,
                     etc.).
                 <li>Data discrepancies: the more removed data gets from the source document the
                     higher the likelihood of error.
                 </li>
             </ul>
             <p>
-                The Prophia platform solves these problems by extracting critical lease data
+                The Prophia platform solves these problems by extracting critical data
                 straight from the source document, presenting it in a standardized, dynamic, and
-                extensible manner, and it does so at scale.
+                extensible manner, and at scale.
             </p>
             <div class="gallery">
                 <div class="figure">
@@ -90,16 +90,15 @@
             </p>
             <h2>Phase 1: Establishing a baseline manual process</h2>
             <p>
-                For MVP, we knew we'd need to start off with a manual process; I needed to build an experience whereby
+                For MVP, we knew we'd need to start with a manual process; My task was to design an experience whereby
                 our in-house team of
-                “onboarders” could read the lease document, “tag” the critical data, categorize
-                it, and transform it into the required format.
+                “onboarders” could read the lease document, “tag” the critical data, and transform it into a standard
+                format.
             </p>
             <h3>Ideation</h3>
             <p>
-                Not wanting to reinvent the wheel, I looked at existing
-                products that involve both the viewing of a document and the capture of
-                important data within it:
+                Not wanting to reinvent the wheel, I looked at similar existing
+                products:
             </p>
             <div class="gallery">
                 <div class="figure">
@@ -216,28 +215,27 @@
                 </div>
             </div>
             <p>
-                Once I felt reasonably confident, I tested prototypes of my proposed workflows with internal
-                stakeholders, most importantly the team of onboarders. I refined my designs based on this feedback and
+                Once I felt sufficiently confident, I tested prototypes of my proposed workflows with the onboarding
+                team. I refined my designs based on this feedback and
                 delivered the spec for this critical feature.
             </p>
             <h2>Phase 2: Scaling the process w/ Machine Learning</h2>
             <p>
-                As we signed up more beta customers, no path to scalability was possible without
-                leveraging Machine Learning to interpret and extract the data. The whole product
-                team worked collaboratively to assess the feasibility of various solutions, and
-                how to operationalize them in the UX. Our approach was divided into 3 stages:
+                As we signed more beta customers, no path to scalability was possible without
+                leveraging Machine Learning to interpret and extract the data. The product
+                team worked collaboratively to devise a 3-stage process:
             </p>
             <ul>
                 <li>
                     Stage 1: The model lacks
                     sufficient training data to make accurate predictions of the meaning of the
-                    text. However, it is capable of alerting the onboarder that a portion of text
+                    text. However, it can alert the onboarder that a portion of text
                     appears “significant”.
                 </li>
                 <li>
                     Stage 2: Once we are sufficiently
                     confident in the training data, build a model that predicts which data points
-                    are likely to be found within a significant portion of text. Surface these
+                    are likely found within a portion of significant text. Surface these
                     predictions to the onboarder for human verification.
                 </li>
                 <li>
@@ -247,8 +245,7 @@
                 </li>
             </ul>
             <p>
-                I focused my efforts on stages 1 & 2 since we had greater confidence in our
-                ability to deliver on them. I experimented with several concepts for how best to
+                At first I focused on the more near-term stages 1 & 2. I experimented with several concepts for how best to
                 indicate where significant portions of text lie, and what they might contain:
             </p>
             <div class="gallery">
@@ -288,31 +285,31 @@
                 </div>
             </div>
             <p>
-                After prototyping and testing these concepts with our onboarders, a clear area
-                of improvement was findability; many leases are hundreds of pages long and
+                After prototyping and testing these concepts onboarders, a clear area
+                of improvement was findability. Many leases are hundreds of pages long;
                 suggestions are useless unless the onboarder knows that they exist and where to
                 find them. My solution involved a suggestions table of contents, and a custom
-                scrollbar indicating the locations of each.
+                scrollbar indicating a suggestion's location.
             </p>
             <h3>Measuring Results</h3>
             <p>
-                As it turns out, measuring the performance of these features proved devilishly
+                Measuring the performance of these features proved devilishly
                 hard, because:
             </p>
             <ul>
-                <li>We’re constantly hiring new onboarders, each of which experiences a learning
-                    curve with interpreting lease documents
+                <li>We’re constantly hiring new onboarders, each experiences a learning
+                    curve in interpreting lease documents
                 <li>The onboarding team is continuously updating and improving their processes
                 <li>We regularly add to the number of data points we capture
                 <li>Etc.
                 </li>
             </ul>
             <p>
-                Despite this difficulty, a clear demonstration of value is the fact that we are now capturing <span
+                Despite this difficulty, a clear demonstration of value is the fact that we have now captured <span
                     class="emphasis">more data points via ML</span> than have
-                ever been captured by human onboarders. This ML-powered ingress, extraction, and
+                ever been captured by humans. This ML-powered ingress, extraction, and
                 interpretation pipeline is in no small part responsible for our success in
-                expanding with existing customers, signing up new customers, and <span class="emphasis">securing VC
+                signing up new customers, expanding with existing customers, and <span class="emphasis">securing VC
                     investment.</span>
             </p>
         </div>
