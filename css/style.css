@@ -1024,13 +1024,4 @@ Media Queries
     max-width: 288px;
   }
 }
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
 /*# sourceMappingURL=style.css.map */
