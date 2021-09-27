@@ -368,23 +368,19 @@ header {
   background-repeat: no-repeat;
 }
 
-header .wrap {
-  position: relative;
-  height: 100%;
-}
-
-header #canvas-basic,
-header #canvas-complex {
-  opacity: .75;
+header canvas.background {
+  opacity: .7;
   position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
+}
+
+header .wrap {
+  position: relative;
+  height: 100%;
 }
 
 header .tagline {
@@ -451,8 +447,8 @@ Color Coordination
 }
 
 .proj-4 footer {
-  background: -webkit-gradient(linear, left top, right top, from(#0062ff), to(#50cad8));
-  background: linear-gradient(-270deg, #0062ff 0%, #50cad8 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#0062ff), to(#61efff));
+  background: linear-gradient(-270deg, #0062ff 0%, #61efff 100%);
 }
 
 .proj-5 footer {
