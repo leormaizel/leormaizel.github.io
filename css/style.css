@@ -714,14 +714,6 @@ Pages: Portfolio Projects
 }
 
 /* ----- Portflio Projects: Content ----- */
-.portfolio-project .emphasis {
-  display: inline-block;
-  margin: 0 0.1em;
-  background-color: #d5eff0;
-  padding: 0px 5px;
-  border-radius: 3px;
-}
-
 .portfolio-project .wrap {
   max-width: 45rem;
 }

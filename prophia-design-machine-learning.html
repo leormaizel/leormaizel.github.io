@@ -90,7 +90,8 @@
             </p>
             <h2>Phase 1: Establishing a baseline manual process</h2>
             <p>
-                For MVP, we knew we needeed to start with a manual process; my task was to design an experience whereby
+                Given limited MVP resources, we knew that at the outset of the business, we'd hve to rely on a manual
+                process for capturing the critical data in each doument. I designed an experience whereby
                 our in-house team of
                 “onboarders” could read the lease document, “tag” the critical data, and transform it into a standard
                 format.
@@ -221,9 +222,16 @@
             </p>
             <h2>Phase 2: Scaling the process w/ Machine Learning</h2>
             <p>
-                As we signed more beta customers, no path to scalability was possible without
-                leveraging Machine Learning to interpret and extract the data. The product
-                team worked collaboratively to devise a 3-stage process:
+                As we signed more beta customers, we approached a point we knew was coming&mdash;how do we scale our
+                business given that one of it's most critical aspects is a heavily manual process? As
+                we grew our onboarding team, we also experimented with Machine Learning-based proofs-of-concept for
+                interpreting and capturing textual information. These experiments were successful&mdash;we determined
+                that was a sufficiently high
+                likelihood that we could use ML to augment this part of our operations, and that our capabilities would
+                only grow with time as our models drew upon ever more training data.
+
+                The product team worked collaboratively to devise a 3-stage approach developing this ML-aided
+                technology:
             </p>
             <ul>
                 <li>
@@ -293,23 +301,28 @@
             </p>
             <h3>Measuring Results</h3>
             <p>
-                Measuring the performance of these features proved devilishly
-                hard, because:
+                Measuring the performance of these features is requires overcoming many obstacles:
             </p>
             <ul>
-                <li>We’re constantly hiring new onboarders, each experiences a learning
-                    curve in interpreting lease documents
-                <li>The onboarding team is continuously improving and thus changing their processes
+                <li>We’re constantly hiring new onboarders, and each experiences a learning
+                    curve in interpreting leases documents
+                <li>The onboarding team is continuously improving their processes
                 <li>We regularly add to the number of data points we capture
             </ul>
             <p>
-                Despite this difficulty, a clear demonstration of value is the fact that we have now captured <span
-                    class="emphasis">more data points via ML</span> than have
-                ever been captured manually. This ML-powered ingress, extraction, and
-                interpretation pipeline is in no small part responsible for our success in
-                signing up new customers, expanding with existing customers, and <span class="emphasis">securing VC
-                    investment.</span>
-            </p>
+                Despite these difficulties, our ML-aided data capture process has demonstrated clear value:
+                <ul>
+                    <li><span class="emphasis">Half of all data points are captured 100% automatically</span>,
+                        freeing our onboarders to focus on the more complex lease terms</li>
+                    <li>The text suggestion features I designed have decreased onboarding time by <span
+                        class="emphasis">64%</span> on average </li>
+                </ul>
+
+                <p>This ML-powered ingress, extraction, and
+                    interpretation pipeline is in no small part responsible for our success in
+                   expanding with existing customers, handling large expansions in a timely manner, and <span class="emphasis">securing VC
+                        investment.</span>
+                </p>
         </div>
     </section>
 
@@ -350,7 +363,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/granim.min.js"></script>
     <script>
         // Nav bar transition effect after scrolling >1 pixel
         $(window).scroll(function () {
