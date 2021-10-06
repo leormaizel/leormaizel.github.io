@@ -17,17 +17,17 @@ Primary designer for Socrata’s new major product initiative–an internal data
 BookingSuite (Booking.com)
 User Experience Designer
 Feb 2015 – Jan 2017
-Primary IC designer for both of BookingSuite’s major new products: a hotel website CMS and a property management product. My role encompassed the entire product lifecycle, including generative research, requirement definition, prototyping, working with developers throughout the build process, and evaluative testing methodologies i.e. IA tree-testing, first-click analysis, and moderated eye-tracking usability sessions. After a strategic pivot, I led the design for integrating the above products into Booking.com’s existing B2B platform with a reach of over 1 million hotels.
+Primary IC designer for both of BookingSuite’s major new products: a hotel website CMS and a property management product. My role encompassed the entire product lifecycle, including generative research, requirement definition, prototyping, working with developers throughout the build process, and evaluative testing methodologies i.e. IA tree-testing, first-click analysis, and moderated eye-tracking usability sessions. After a strategic pivot, I led the design for integrating the above products into Booking.com’s existing B2B platform with a reach of over 1 million hotels. I improved host-to-guest communication by 391%, and reduced inbound CS support requests by over 700 hours per quarter.
 
 PitchBook Data
 User Experience Designer
 Feb 2014 – Feb 2015
-On this small product team, I was IC, PM, and mentor to two other designers. I served as one of two team leads, owning projects such as improving the platform’s primary search functionality, core financial data visualizations, and platform-wide LinkedIn and Excel integrations.
+On this newly-formed product team, I was IC, PM, and mentor to two other designers. I served as one of two team leads, owning projects such as improving the platform’s primary search functionality, core financial data visualizations, and platform-wide LinkedIn and Excel integrations.
 
 Optimal
 User Experience Designer
 Jun 2012 – Feb 2014
-I led the redesign of two of the company's major new lead-gen website launches; conducted competitive & SEO research to plan new site content and features; designed site architecture and user flows; measured and optimized user engagement and conversion metrics, implemented designs in clean and responsive HTML/CSS; mentored new hires.
+I led the redesign of two of the company's major new lead-generation website launches; conducted competitive & SEO research to plan new site content and features; designed site architecture and user flows; measured and optimized user engagement and conversion metrics, implemented designs in clean and responsive HTML/CSS; mentored new hires.
 
 Education:
 
