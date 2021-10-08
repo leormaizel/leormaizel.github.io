@@ -51,22 +51,23 @@
 
             <h2>Background</h2>
             <p>
-                Today, Prophia (FKA Leaseable) is a SaaS platform that enables Commercial Real Estate (CRE)
-                firms to gain better insight into the performance of their portfolios.
+                Prophia (FKA Leaseable) is a SaaS platform that enables Commercial Real Estate (CRE)
+                firms to gain better insight into their portfolio performance.
             </p>
             <p>
-                When I joined as employee #2, Prophia was nothing but a
+                When I joined as employee #2, Prophia was merely a
                 hypothesis: the inefficiency endemic to CRE represents an
                 opportunity for technological innovation. But what form that might take was unknown.
             </p>
             <h2>Validating the Problem Space</h2>
             <p>
-                Before we built anything, the founding team met with 12 CRE
-                firms ranging from boutique to REITs and pre-sold a hypothetical product to see
-                which value propositions garnered the most interest.
+                Before building anything, the founding team met with 12 CRE
+                firms ranging from boutique to enterprise and pre-sold a hypothetical product to gauge interest in
+                different value propositions.
             </p>
             <ul>
-                <li>Lease Management: making the day-to-day management of their tenants more efficient by automating manual processes </li>
+                <li>Lease Management: making tenant management more efficient by automating
+                    manual processes </li>
                 <li>Transactional Efficiency: enabling CRE firms to track deals,
                     negotiations, and collaborate as a team</li>
                 <li>Data Insights: providing authoritative benchmarking and market comp data</li>
@@ -78,88 +79,60 @@
             <iframe class="no-gallery" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
                 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBJiX9DNtyGa3RmMfbUyv0R%2FFrank-Robinson%3Fnode-id%3D2%253A3%26scaling%3Dmin-zoom%26page-id%3D0%253A1"
                 allowfullscreen></iframe>
-            <p>
-                With findings from our interviews, we developed a working understanding of:
-            </p>
-            <ul>
-                <li>The organizational differences between CRE firms of different sizes</li>
-                <li>The job roles within each firm type</li>
-                <li>The buyers versus the platform users</li>
-                <li>The opportunities untapped in the competitive landscape</li>
-                <li>The inter-organizational complexity of our ideas. I.e. some solutions could deliver value to just the CRE firm, whereas
-                    others required adoption lawyers, brokers,
-                    and banks as well</li>
-            </ul>
             <h2>MVP Strategy</h2>
             <p>
-                We focused our MVP on addressing the following key business problems:
+                Equipped with the findings from our interviews, we focused our MVP on addressing the following key
+                business problems:
             </p>
             <h3>#1: Critical business data is inaccessible</h3>
             <p>
                 There is no source of business data more critical than the lease document; it
                 drives cash flows, budget projections, buying/selling strategy, etc. However,
-                this critical asset is always either a physical document locked in a fireproof
-                cabinet or a PDF in a jumbled share drive. The data is neither accessible,
-                extensible, nor dynamic
-            </p>
-            <p>
-                Furthermore, leases are inherently complex; landlords must deploy massive resources
-                to create standardized summaries of the key points of the lease to mitigate this
-                complexity.
+                this critical asset is either a physical document locked in a fireproof
+                cabinet or a PDF in a jumbled share drive.
             </p>
             <h3>#2: No single source of truth</h3>
             <p>
                 An entire solar
                 system of brittle reporting revolves around the lease document; Excel reports are pockmarked with
                 broken references; uncertainty reigns over which report is up-to-date;
-                data is frequently inconsistent between vendor software systems like
-                accounting, budgeting, etc.
+                data is frequently inconsistent between vendor systems.
             </p>
             <h3>#3: Endless low-level busywork</h3>
             <p>
-                CRE firms have rigorous reporting obligations to stakeholders such as lenders,
-                capital partners, limited partners, the SEC, etc. Analysts regularly
+                Analysts must regularly
                 generate reports cobbled together from disparate systems and
-                legal documents &mdash;for every single building. 
-            </p>
-            <p>
-                In addition, the daily, bread-and-butter work of managing leases falls to the
-                armies of lease administrators who must wade through complex
+                legal documents&mdash;for every single building.
+                Armies of lease administrators must wade through complex
                 legalese to determine the Landlord's obligations.
             </p>
             <h3>MVP Features</h3>
             <p>
-                Given the problems we hoped to solve, the Chief Architect, CPO, and I
+                Given the problems we hoped to solve, the product team
                 brainstormed the key features of our MVP:<br>
             </p>
             <ul>
                 <li>A digitized version of each lease contract, keyword
                     searchable, where the key provisions of the lease are marked and standardized</li>
-                <li>A process that enables our internal team to capture each
-                    data point in each document</li>
+                <li>A process that enables our internal team to relevant
+                    data points in each document</li>
                 <li>A standardized and accessible “lease summary” in which the most critical
-                    data is summarized</li>
+                    data is presented</li>
                 <li>A searchable database of tenants</li>
                 <li>Canned industry-standard reports based on this data</li>
             </ul>
             <h3>Design Process</h3>
             <p>
-                I’d never designed anything from scratch before; in every previous role, the
-                universe of possibilities had already been collapsed into an existing
-                IA/UI. But Prophia had zero constraints&mdash;an
-                experience simultaneously nerve-wracking and liberating.
-            </p>
-            <p>
-                Several of my key considerations:
-            </p>
-            <ul>
-                <li>What are the key pieces of content and their differentiators? Is this content hierarchical in nature, or flat?</li>
-                <li>What are the key anticipated user paths throughout this content?</li>
-            </ul>
-            <p>
-                I sought to follow closely the paradigms that I observed were
-                familiar to those in CRE, knowing that none of my designs would fully
-                stand the test of time and that future designers would invariably curse my name.
+                Given that Prophia aimed to transform workflows within an industry traditionally resistant to
+                technology, I aimed to follow as closely as possible the paradigms familiar to people in CRE. Several
+                key considerations in my process were:
+                <ul>
+                    <li>Determining the main
+                        pieces of content and their differentiators; should this content be represented hierarchically,
+                        or flat?</li>
+                    <li>Understanding key anticipated user paths throughout this content</li>
+                    <li>Figuring outwhere to give the user what they want, and where to give them what they don't know they want</li>
+                </ul>
                 <div class="gallery">
                     <div class="figure">
                         <div>
@@ -231,16 +204,16 @@
                                 <img src="assets/img/proj-prophia-mvp/doc-viewer.jpg">
                             </a>
                         </div>
-                        <p>MVP concept for lease document viewer; captured data points are highlighted in green, the data point the user is currently viewing is highlighted in yellow</p>
+                        <p>MVP concept for lease document viewer; captured data points are highlighted in green, the
+                            data
+                            point the user is currently viewing is highlighted in yellow</p>
 
                     </div>
                 </div>
                 <h2>Feedback from Design Partners</h2>
                 <p>
-                    Prophia is an enterprise-level SaaS product; It isn’t cheap, it can’t be used
-                    instantly upon sign-up, and it involves long sales
-                    cycles. The Prophia MVP could not have succeeded without our
-                    Design Partners&mdash;8 CRE firms of different sizes. I
+                    We released the Prophia MVP to our
+                    Design Partners&mdash;8 CRE firms of different levels of organizational complexity. I
                     ran (and continue to run) this program, geared toward:
                 </p>
                 <ul>
@@ -249,7 +222,7 @@
                     <li>Access to sample critical business reports and documents</li>
                 </ul>
                 <p>
-                    The Prophia MVP was released on September 18th, 2018. My ongoing research and
+                    My ongoing research and
                     validation work with Design Partners continues to inform our product
                     prioritization, and we’ve seen <span class="emphasis">steady quarterly growth</span> in new
                     customers and expansions ever since.

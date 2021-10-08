@@ -52,25 +52,24 @@
 
             <h2>Background</h2>
             <p>
-                For the Commercial Real Estate (CRE) firm, there is no source of business data
-                more critical than the lease document; it drives cash flows, budget projections,
-                buying/selling strategies, etc. Unfortunately, this data always takes the form of a physical document
+                For the Commercial Real Estate (CRE) firm, the most critical source of business data
+                is the lease document; it drives budget projections,
+                buying/selling strategies, etc. Unfortunately, leases tend to be physical documents
                 locked in a
-                fireproof cabinet, or a PDF lost in a jumbled share drive, leading to
+                fireproof cabinet, or PDFs lost in a jumbled share drive, leading to
                 several downstream problems:
             </p>
             <ul>
-                <li>Non-scalability: lease administrators must manually refer to the
-                    lease to answer all but the simplest questions.
-                <li>Organizational inefficiency: Key lease terms must be
-                    manually entered into all 3rd-party systems (i.e. accounting, budgeting,
-                    etc.).
-                <li>Data discrepancies: the more removed data gets from the source document the
-                    higher the likelihood of error.
+                <li>Lease administrators must refer to the
+                    lease document to answer all but the simplest questions.</li>
+                <li>Key lease terms must be
+                    manually entered into accounting systems, budgeting, etc.</li>
+                <li>The more removed data gets from the source document the
+                    higher the likelihood of discrepancies between systems.
                 </li>
             </ul>
             <p>
-                The Prophia platform solves these problems by extracting critical data
+                Prophia solves these problems by extracting critical data
                 straight from the source document, and presenting it in a standardized, dynamic, and
                 extensible manner. And it does so at scale.
             </p>
@@ -90,10 +89,10 @@
             </p>
             <h2>Phase 1: Establishing a baseline manual process</h2>
             <p>
-                Given limited MVP resources, we knew that at the outset of the business, we'd hve to rely on a manual
-                process for capturing the critical data in each doument. I designed an experience whereby
+                Given limited MVP resources, we knew we'd have to start with a manual
+                process for capturing the relevant data in each document. I designed an experience whereby
                 our in-house team of
-                “onboarders” could read the lease document, “tag” the critical data, and transform it into a standard
+                “onboarders” could view the document, “tag” the critical data, and transform it into a standardized
                 format.
             </p>
             <h3>Ideation</h3>
@@ -215,36 +214,28 @@
                     <p>Another exploration of an alternate navigation/IA structure</p>
                 </div>
             </div>
-            <p>
-                Once I felt I had workable models, I tested prototypes of my proposed workflows with the onboarding
-                team. I refined my designs based on this feedback and
-                delivered the spec for this critical feature.
+            <p>When we released this functionality with the Prophia MVP, we achieved a critical business milestone&mdash;
+                we had the functionality needed to onboard customer data. But it was painfully manual, as each set of lease documents took about 3.5 hours to onboard.
             </p>
             <h2>Phase 2: Scaling the process w/ Machine Learning</h2>
             <p>
-                As we signed more beta customers, we approached a point we knew was coming&mdash;how do we scale our
-                business given that one of it's most critical aspects is a heavily manual process? As
-                we grew our onboarding team, we also experimented with Machine Learning-based proofs-of-concept for
-                interpreting and capturing textual information. These experiments were successful&mdash;we determined
-                that was a sufficiently high
-                likelihood that we could use ML to augment this part of our operations, and that our capabilities would
-                only grow with time as our models drew upon ever more training data.
+                As we signed more beta customers, we approached a bottleneck in onboarding capabilities. As we hired more onboarders,
+                we experimented with Machine Learning-based methods for
+                interpreting and capturing textual information.</p>
 
-                The product team worked collaboratively to devise a 3-stage approach developing this ML-aided
+                <p>Based on the promising initial results of these experiments, the product team collaboratively devised a 3-stage approach to operationalizing this
                 technology:
             </p>
             <ul>
                 <li>
                     Stage 1: The model lacks
-                    sufficient training data to make accurate predictions of the meaning of the
-                    text. However, it can alert the onboarder that a portion of text
+                    sufficient training data to make accurate text predictions. However, it can alert the onboarder that a portion of text
                     appears “significant”.
                 </li>
                 <li>
                     Stage 2: Once we are sufficiently
-                    confident in the training data, build a model that predicts which data points
-                    are likely found within a portion of significant text. Surface these
-                    predictions to the onboarder for human verification.
+                    confident in the model's recall and accuracy, predict which data points
+                    are likely found within the text and present these predictions to the onboarder for verification.
                 </li>
                 <li>
                     Stage 3: Automatically capture
@@ -253,7 +244,7 @@
                 </li>
             </ul>
             <p>
-                At first I focused on more near-term stages 1 & 2. I experimented with several concepts for how best to
+                I experimented with several concepts for how best to
                 indicate where significant portions of text lie, and what they might contain:
             </p>
             <div class="gallery">
@@ -282,6 +273,15 @@
                     </div>
                     <p>Stage 2 concept: the model is able to predict which data point/s lie in a paragraph</p>
                 </div>
+                </div>
+                <p>
+                    After prototyping and testing these concepts with onboarders, findability was a clear area
+                    of improvement. Many leases are hundreds of pages long;
+                    suggestions are useless unless the onboarder knows that they exist and where to
+                    find them. My solution involved a suggestions table of contents, and a custom
+                    scrollbar indicating a suggestion's location.
+                </p>
+                <div class="gallery">
                 <div class="figure">
                     <div>
                         <a href="#" data-featherlight="assets/img/proj-prophia-ml/docatlas-4.jpg">
@@ -292,30 +292,23 @@
                         suggestions ToC, and a custom scrollbar with suggestion indicators</p>
                 </div>
             </div>
-            <p>
-                After prototyping and testing these concepts with onboarders, a clear area
-                of improvement was findability. Many leases are hundreds of pages long;
-                suggestions are useless unless the onboarder knows that they exist and where to
-                find them. My solution involved a suggestions table of contents, and a custom
-                scrollbar indicating a suggestion's location.
-            </p>
             <h3>Measuring Results</h3>
             <p>
-                Measuring the performance of these features is requires overcoming many obstacles:
+                Measuring the performance of these features required overcoming several obstacles:
             </p>
             <ul>
-                <li>We’re constantly hiring new onboarders, and each experiences a learning
-                    curve in interpreting leases documents
-                <li>The onboarding team is continuously improving their processes
-                <li>We regularly add to the number of data points we capture
+                <li>Each new-hire onboarder experiences a learning
+                    curve in interpreting lease documents</li>
+                <li>The onboarding team continuously changes/improves their processes</li>
+                <li>We regularly add to the number of data points we capture</li>
             </ul>
             <p>
                 Despite these difficulties, our ML-aided data capture process has demonstrated clear value:
                 <ul>
                     <li><span class="emphasis">Half of all data points are captured 100% automatically</span>,
-                        freeing our onboarders to focus on the more complex lease terms</li>
-                    <li>The text suggestion features I designed have decreased onboarding time by <span
-                        class="emphasis">64%</span> on average </li>
+                        freeing our onboarders to focus on more complex lease terms</li>
+                    <li>The text suggestion features I designed have decreased onboarding time by an average of <span
+                        class="emphasis">64%</span>, from 3.5 to 1.25 hours per building.</li>
                 </ul>
 
                 <p>This ML-powered ingress, extraction, and
